@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react"
-import CSSRulePlugin from "gsap/CSSRulePlugin"
 import CSSPlugin from "gsap/CSSPlugin"
 import { TimelineLite, Power3 } from "gsap"
 import MainVideo from "../videos/main.mp4"
@@ -10,19 +9,18 @@ const Header = () => {
   let tl = new TimelineLite()
 
   useEffect(() => {
-    gsap.registerPlugin(CSSPlugin, CSSRulePlugin)
-    let imageReveal = CSSRulePlugin.getRule(".video-container:after")
+    gsap.registerPlugin(CSSPlugin)
     tl.to(header, 0, { css: { visibility: "visible" } })
-      .from(imageReveal, 1.4, {
-        width: "0%",
+      .to(".video_wrapper .revealer", 1.6, {
+        height: "0",
         transformOrigin: "bottom",
         ease: Power3.easeInOut,
       })
-      .from(".text_wrap h1", 1, {
+      .from(".heading_wrapper h1", 1, {
         y: 350,
         ease: Power3.easeOut,
       })
-      .from(".header_wrapper p", 1, {
+      .from(".header_wrapper p", 0.7, {
         opacity: 0,
         y: 60,
         ease: Power3.easeOut,
@@ -32,13 +30,12 @@ const Header = () => {
   return (
     <div className="container">
       <div className="header_wrapper" ref={el => (header = el)}>
-        <div className="video_wrapper">
-          <div className="video_content_wrapper">
-            <div className="text_wrap">
-              <h1>GokenGo.</h1>
-            </div>
+        <div className="content_wrapper">
+          <div className="heading_wrapper">
+            <h1>GokenGo.</h1>
           </div>
-          <div className="video-container">
+          <div className="video_wrapper">
+            <div className="revealer"></div>
             <video loop autoPlay muted>
               <source src={MainVideo} type="video/mp4" />
             </video>

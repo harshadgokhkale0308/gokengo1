@@ -8,38 +8,33 @@
   top: 25vh;
   height: 80vh;
 
-  .video_wrapper {
+  .content_wrapper {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .video_content_wrapper {
+    .heading_wrapper {
       display: flex;
       margin: 0px;
       align-items: center;
       height: 150px;
       overflow: hidden;
-    }
-    .text_wrap {
-      z-index: 100;
-      overflow: hidden;
+      z-index: 200;
       h1 {
         font-size: 12rem;
         margin: 0;
       }
     }
-    .video-container {
+
+    .video_wrapper {
       position: absolute;
-      transform-origin: 0%;
-      &::after {
-        content: "";
+      .revealer {
         position: absolute;
-        width: 100%;
         height: 100%;
-        top: 0;
-        right: 0;
-        background: white;
+        width: 100%;
+        z-index: 100;
+        background: $white;
       }
       video {
         height: 300px;
