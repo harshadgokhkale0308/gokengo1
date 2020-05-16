@@ -25,6 +25,11 @@ const Header = () => {
         y: 60,
         ease: Power3.easeOut,
       })
+      .from(".header_wrapper form", 1, {
+        opacity: 0,
+        y: 60,
+        ease: Power3.easeOut,
+      })
   })
 
   return (
@@ -47,6 +52,15 @@ const Header = () => {
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book.
         </p>
+        <form>
+          <input
+            type="text"
+            name="email"
+            placeholder="enter your email"
+            className="input"
+          ></input>
+          <input className="button" type="submit"></input>
+        </form>
       </div>
     </div>
   )
