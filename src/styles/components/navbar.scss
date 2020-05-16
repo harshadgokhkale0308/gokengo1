@@ -1,0 +1,34 @@
+.nav_flex {
+  position: relative;
+  top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $white;
+  width: inherit;
+  color: $black;
+  z-index: 1000;
+
+  nav ul {
+    text-decoration: none;
+
+    li {
+      display: inline-block;
+      padding: 1rem;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-family: "Open Sans";
+      }
+    }
+    button {
+      background: $black;
+      border: 0px;
+      padding: 0.8rem;
+      margin: 1rem;
+      color: $white;
+    }
+  }
+}
