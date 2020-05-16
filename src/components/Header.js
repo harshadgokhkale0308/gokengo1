@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from "react"
 import CSSRulePlugin from "gsap/CSSRulePlugin"
+import CSSPlugin from "gsap/CSSPlugin"
 import { TimelineLite, Power3 } from "gsap"
 import MainVideo from "../videos/main.mp4"
+import gsap from "gsap"
 
 const Header = () => {
   let header = useRef(null)
   let tl = new TimelineLite()
 
   useEffect(() => {
+    gsap.registerPlugin(CSSPlugin, CSSRulePlugin)
     let imageReveal = CSSRulePlugin.getRule(".video-container:after")
     tl.to(header, 0, { css: { visibility: "visible" } })
       .from(imageReveal, 1.4, {
