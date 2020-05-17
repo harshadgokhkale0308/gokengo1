@@ -4,28 +4,24 @@
 // Components
 @import "./components/navbar.scss";
 @import "./components/header.scss";
+@import "./components/summary.scss";
 
 body,
 html {
   user-select: none;
   overscroll-behavior: none;
-  margin: 0;
+  margin: 0 auto;
   font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $white;
   overflow-x: hidden;
 
-  .page_wrap {
+  .container {
     width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 70vw;
+    overflow: hidden;
   }
 }

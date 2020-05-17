@@ -1,15 +1,12 @@
 import React, { useEffect, useRef } from "react"
-import CSSPlugin from "gsap/CSSPlugin"
 import { TimelineLite, Power3 } from "gsap"
 import MainVideo from "../videos/main.mp4"
-import gsap from "gsap"
 
 const Header = () => {
   let header = useRef(null)
   let tl = new TimelineLite()
 
   useEffect(() => {
-    gsap.registerPlugin(CSSPlugin)
     tl.to(header, 0, { css: { visibility: "visible" } })
       .to(".video_wrapper .revealer", 1.6, {
         height: "0",
