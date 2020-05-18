@@ -24,7 +24,6 @@ const Summary = () => {
     threshold: 0,
     triggerOnce: true,
   })
-
   //   let [ranOnce, SetRanOnce] = useState(false)
 
   useEffect(() => {

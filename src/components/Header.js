@@ -1,21 +1,31 @@
 import React, { useEffect, useRef } from "react"
 import { TimelineLite, Power3 } from "gsap"
 import MainVideo from "../videos/main.mp4"
+import lottie from "lottie-web"
+
+// Preloading Animation
+import preloadingAnim from "../lottie/preloader.json"
 
 const Header = () => {
+  let preloaderContainer = useRef(null)
   let header = useRef(null)
   let tl = new TimelineLite()
 
   useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: preloaderContainer,
+      animationData: preloadingAnim,
+      loop: false,
+    })
+
+    anim.setSpeed(2)
+
     tl.to(header, 0, { css: { visibility: "visible" } })
       .to(".video_wrapper .revealer", 1.6, {
         height: "0",
         transformOrigin: "bottom",
         ease: Power3.easeInOut,
-      })
-      .from(".heading_wrapper h1", 1, {
-        y: 350,
-        ease: Power3.easeOut,
+        delay: 1.2,
       })
       .from(".header_wrapper p", 0.7, {
         opacity: 0,
@@ -27,15 +37,17 @@ const Header = () => {
         y: 60,
         ease: Power3.easeOut,
       })
-  })
+  }, [tl])
 
   return (
     <div className="container">
       <div className="header_wrapper" ref={el => (header = el)}>
         <div className="content_wrapper">
-          <div className="heading_wrapper">
-            <h1>GokenGo.</h1>
-          </div>
+          <div
+            className="stomp_preloader"
+            ref={el => (preloaderContainer = el)}
+          ></div>
+          {/* <div className="heading_wrapper"><h1>GokenGo.</h1></div> */}
           <div className="video_wrapper">
             <div className="revealer"></div>
             <video loop autoPlay muted>

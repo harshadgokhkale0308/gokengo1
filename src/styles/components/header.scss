@@ -5,7 +5,7 @@
   align-items: center;
   color: $black;
   position: relative;
-  top: 20vh;
+  top: 40vh;
   height: 100vh;
 
   .content_wrapper {
@@ -14,6 +14,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .stomp_preloader {
+      position: absolute;
+      z-index: 200;
+      height: 1000px;
+      width: 1000px;
+    }
     .heading_wrapper {
       display: flex;
       margin: 0px;
@@ -38,12 +45,13 @@
       }
       video {
         height: 300px;
+        opacity: 0.8;
       }
     }
   }
   P {
     position: relative;
-    top: 15vh;
+    top: 25vh;
     width: 60%;
     text-align: center;
     font-family: "Open Sans";
@@ -51,9 +59,9 @@
   }
   form {
     position: relative;
-    top: 15vh;
+    top: 25vh;
     .input {
-      background: $grey;
+      background: $input;
       border: 0px;
       padding: 1rem;
       width: 300px;
@@ -63,6 +71,7 @@
       border: 0px;
       color: $white;
       padding: 1rem;
+      mix-blend-mode: difference;
     }
   }
 }
