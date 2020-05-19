@@ -1,0 +1,77 @@
+.impact_wrapper {
+  position: relative;
+  top: 10vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 120vh;
+  .impact_content {
+    grid-column: 1 / span 2;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h1 {
+      font-size: 3.5rem;
+      .wrapper_anim_text {
+        overflow: hidden;
+      }
+    }
+    p {
+      font-size: 1rem;
+      font-family: "Open Sans";
+      width: 90%;
+      margin-top: -2rem;
+    }
+    .money_text {
+      display: flex;
+      flex-direction: column;
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 5rem;
+      span {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+    .requestDemoBtn {
+      position: relative;
+      top: 2rem;
+      border: 0px;
+      background: $black;
+      color: $white;
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  .impact_nodes {
+    grid-column: 3 / span 5;
+    padding: 2rem;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .impact_node {
+      background: $white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 60%;
+      width: 80%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease-in;
+      border-radius: 20px;
+      &:hover {
+        transform: scale(1.5);
+        color: white;
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+      }
+      .icon {
+        font-size: 3rem;
+      }
+    }
+  }
+}

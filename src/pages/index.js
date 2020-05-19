@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Header from "../components/Header"
 import Summary from "../components/summary"
 import Features from "../components/Features"
+import Impact from "../components/Impact"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <Header></Header>
     <Summary></Summary>
     <Features></Features>
+    <Impact></Impact>
   </Layout>
 )
 
