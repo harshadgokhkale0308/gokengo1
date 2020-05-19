@@ -8,22 +8,26 @@ const Impact = () => {
     threshold: 0,
     triggerOnce: true,
   })
-
+  let tl = new TimelineLite()
   useEffect(() => {
     if (inView) {
-      let tl = new TimelineLite()
       tl.staggerFrom(
         ".text_inner",
         0.8,
         { y: 100, ease: Power3.easeOut },
         0.3,
-        0.7
+        0.6
       )
-        .from(".impact_content p", 0.4, {
-          opacity: 0,
-          y: 10,
-          ease: Power3.easeOut,
-        })
+        .from(
+          ".impact_content p",
+          0.2,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeOut,
+          },
+          "-=0.1"
+        )
         .from(".money_text", 0.4, { opacity: 0, y: 10, ease: Power3.easeOut })
         .staggerFrom(
           ".impact_node",
@@ -33,7 +37,7 @@ const Impact = () => {
         )
         .from(".requestDemoBtn", 0.4, {
           opacity: 0,
-          y: 100,
+          y: 10,
           ease: Power3.easeOut,
         })
     }

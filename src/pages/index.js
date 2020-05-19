@@ -8,6 +8,7 @@ import Header from "../components/Header"
 import Summary from "../components/summary"
 import Features from "../components/Features"
 import Impact from "../components/Impact"
+import MissingLink from "../components/MissingLink"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <Summary></Summary>
     <Features></Features>
     <Impact></Impact>
+    <MissingLink></MissingLink>
   </Layout>
 )
 
