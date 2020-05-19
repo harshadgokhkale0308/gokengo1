@@ -2,37 +2,95 @@ import React, { useEffect, useState, useRef } from "react"
 import { TimelineLite, Power3 } from "gsap"
 
 const Features = () => {
-  let [animateFeatureOne, setAnimateFeature] = useState(null)
+  let [animateFeatureOne, setAnimateFeatureOne] = useState(null)
+  let [animateFeatureTwo, setAnimateFeatureTwo] = useState(null)
+  let [animateFeatureThree, setAnimateFeatureThree] = useState(null)
+  let [animateFeatureFour, setAnimateFeatureFour] = useState(null)
+  let [animateFeatureFive, setAnimateFeatureFive] = useState(null)
+  let [animateFetaureSiz, setAnimateFeatureSix] = useState(null)
+
+  // Feature One
   let tl = new TimelineLite()
-  // featureOne
   let featureRefOne = useRef(null)
-  let featureContentRef = useRef(null)
+  let featureContentOneRef = useRef(null)
+  let featureQuestionOneRef = useRef(null)
+
+  // Feature Two
+  let tl2 = new TimelineLite()
+  let featureRefTwo = useRef(null)
+  let featureContentTwoRef = useRef(null)
+  let featureQuestionTwoRef = useRef(null)
+
+  // Feature Three
+  let tl3 = new TimelineLite()
+  let featureRefThree = useRef(null)
+  let featureContentThreeRef = useRef(null)
+  let featureQuestionThreeRef = useRef(null)
+
+  // Feature Four
+  let tl4 = new TimelineLite()
+  let featureRefFour = useRef(null)
+  let featureContentFourRef = useRef(null)
+  let featureQuestionFourRef = useRef(null)
+
+  // Feature Five
+  let tl5 = new TimelineLite()
+  let featureRefFive = useRef(null)
+  let featureContentFiveRef = useRef(null)
+  let featureQuestionFiveRef = useRef(null)
+
+  // Feature Six
+  let tl6 = new TimelineLite()
+  let featureRefSix = useRef(null)
+  let featureContentSixRef = useRef(null)
+  let featureQuestionSixRef = useRef(null)
 
   useEffect(() => {
-    setAnimateFeature(
+    setAnimateFeatureOne(
       tl
         .to(featureRefOne, 0.2, { width: "100%", ease: Power3.easeIn })
-        .to(featureContentRef, 0.2, {
+        .to(featureContentOneRef, 0.2, {
           opacity: 0,
           y: -20,
           ease: Power3.easeOut,
         })
-        .to(featureRefOne, 0.2, { css: { background: "#efeeee" } })
-        .from(".feature_question", 0.2, {
+        .from(featureQuestionOneRef, 0.2, {
           opacity: 0,
           y: 20,
           ease: Power3.easeOut,
         })
+        .to(featureRefOne, 0.2, { css: { background: "#efeeee" } })
+    )
+
+    setAnimateFeatureTwo(
+      tl2
+        .to(featureContentTwoRef, 0.2, {
+          opacity: 0,
+          y: -20,
+          ease: Power3.easeOut,
+        })
+        .from(featureQuestionTwoRef, 0.2, {
+          opacity: 0,
+          y: 20,
+          ease: Power3.easeOut,
+        })
+        .to(featureRefTwo, 0.2, { css: { background: "#efeeee" } })
     )
   }, [])
 
-  const onMouseEnterHandler = () => {
-    console.log("this is called")
+  //  Mouse Handlers
+  const onMouseEnterHandlerOne = () => {
     animateFeatureOne.play()
   }
-  const onMouseLeaveHandler = () => {
-    console.log("Mouse Exit Called")
+  const onMouseLeaveHandlerOne = () => {
     animateFeatureOne.reverse()
+  }
+
+  const onMouseEnterHandlerTwo = () => {
+    animateFeatureTwo.play()
+  }
+  const onMouseLeaveHandlerTwo = () => {
+    animateFeatureTwo.reverse()
   }
 
   return (
@@ -49,17 +107,65 @@ const Features = () => {
         </div>
         <div
           className="feature_one"
-          onMouseEnter={onMouseEnterHandler}
-          onMouseLeave={onMouseLeaveHandler}
+          onMouseEnter={onMouseEnterHandlerOne}
+          onMouseLeave={onMouseLeaveHandlerOne}
         >
           <div ref={el => (featureRefOne = el)} className="feature_container">
-            <div ref={el => (featureContentRef = el)}>
+            <div ref={el => (featureContentOneRef = el)}>
               <h1>Record</h1>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
             </div>
+          </div>
+          <div
+            ref={el => (featureQuestionOneRef = el)}
+            className="feature_question"
+          >
+            <h1>Heading</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+        <div
+          className="feature_two"
+          onMouseEnter={onMouseEnterHandlerTwo}
+          onMouseLeave={onMouseLeaveHandlerTwo}
+          ref={el => (featureRefTwo = el)}
+        >
+          <div
+            className="feature_container"
+            ref={el => (featureContentTwoRef = el)}
+          >
+            <div>
+              <h1>Record</h1>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+          <div
+            className="feature_question"
+            ref={el => (featureQuestionTwoRef = el)}
+          >
+            <h1>Heading</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+        <div className="feature_three">
+          <div className="feature_container">
+            <h1>Record</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
           </div>
           <div className="feature_question">
             <h1>Heading</h1>
@@ -69,40 +175,53 @@ const Features = () => {
             </p>
           </div>
         </div>
-        <div className="feature_two">
-          <h1>Record</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-        </div>
-        <div className="feature_three">
-          <h1>Record</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-        </div>
         <div className="feature_four">
-          <h1>Record</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+          <div className="feature_container">
+            <h1>Record</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="feature_question">
+            <h1>Heading</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
         </div>
         <div className="feature_five">
-          <h1>Record</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+          <div className="feature_container">
+            <h1>Record</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="feature_question">
+            <h1>Heading</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
         </div>
         <div className="feature_six">
-          <h1>Record</h1>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+          <div className="feature_container">
+            <h1>Record</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="feature_question">
+            <h1>Heading</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
         </div>
       </div>
     </div>
