@@ -6,12 +6,14 @@ import SEO from "../components/seo"
 // Components
 import Header from "../components/Header"
 import Summary from "../components/summary"
+import Features from "../components/Features"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Header></Header>
     <Summary></Summary>
+    <Features></Features>
   </Layout>
 )
 

@@ -48,7 +48,7 @@ const Summary = () => {
   }, [inView])
 
   return (
-    <div className="container">
+    <div className="container bg_white">
       <div className="summary_wrapper" ref={ref}>
         <div className="heading">
           <h1>
