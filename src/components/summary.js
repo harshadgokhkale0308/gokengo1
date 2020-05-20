@@ -24,11 +24,9 @@ const Summary = () => {
     threshold: 0,
     triggerOnce: true,
   })
-  //   let [ranOnce, SetRanOnce] = useState(false)
-
+  let tl = new TimelineLite()
   useEffect(() => {
     if (inView) {
-      let tl = new TimelineLite()
       tl.from(".heading_inner", 1, {
         y: 350,
         ease: Power3.easeOut,

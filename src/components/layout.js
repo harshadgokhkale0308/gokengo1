@@ -12,6 +12,7 @@ import CSSPlugin from "gsap/CSSPlugin"
 
 // Components
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Layout = ({ children }) => {
     <div>
       <Navbar></Navbar>
       <main>{children}</main>
+      <Footer></Footer>
     </div>
   )
 }

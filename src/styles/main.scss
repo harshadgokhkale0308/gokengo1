@@ -8,7 +8,8 @@
 @import "./components/features.scss";
 @import "./components//impact.scss";
 @import "./components/missinglink.scss";
-
+@import "./components/requestdemo.scss";
+@import "./components/footer.scss";
 body,
 html {
   user-select: none;
@@ -36,6 +37,7 @@ html {
 
 .bg_black {
   background-color: black;
+  color: white;
 }
 .bg_grey {
   background: #efeeee;

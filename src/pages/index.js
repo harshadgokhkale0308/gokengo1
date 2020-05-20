@@ -9,6 +9,7 @@ import Summary from "../components/summary"
 import Features from "../components/Features"
 import Impact from "../components/Impact"
 import MissingLink from "../components/MissingLink"
+import RequestDemo from "../components/RequestDemo"
 
 const IndexPage = () => (
   <Layout>
@@ -18,6 +19,7 @@ const IndexPage = () => (
     <Features></Features>
     <Impact></Impact>
     <MissingLink></MissingLink>
+    <RequestDemo></RequestDemo>
   </Layout>
 )
 
