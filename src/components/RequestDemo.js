@@ -5,7 +5,6 @@ const RequestDemo = () => {
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = data => {
     console.log(data)
-    console.log("This is called")
   }
 
   console.log(errors)

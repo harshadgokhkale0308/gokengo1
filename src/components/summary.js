@@ -43,7 +43,7 @@ const Summary = () => {
           0.2
         )
     }
-  }, [inView])
+  }, [inView, tl])
 
   return (
     <div className="container bg_white">

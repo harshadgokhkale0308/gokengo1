@@ -27,7 +27,7 @@ const MissingLink = () => {
           0.2
         )
     }
-  }, [inView])
+  }, [inView, tl])
 
   return (
     <div className="container">
@@ -45,7 +45,7 @@ const MissingLink = () => {
           you with the process and the results are there for you to see !
         </p>
         <div className="cards_holder">
-          <div className="card card_one">
+          <div className="final_card card_one">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>
@@ -54,7 +54,7 @@ const MissingLink = () => {
               see!
             </p>
           </div>
-          <div className="card card_two">
+          <div className="final_card card_two">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>
@@ -63,7 +63,7 @@ const MissingLink = () => {
               see!
             </p>
           </div>
-          <div className="card card_three">
+          <div className="final_card card_three">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>
@@ -72,7 +72,7 @@ const MissingLink = () => {
               see!
             </p>
           </div>
-          <div className="card card_one">
+          <div className="final_card card_one">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>
@@ -81,7 +81,7 @@ const MissingLink = () => {
               see!
             </p>
           </div>
-          <div className="card card_two">
+          <div className="final_card card_two">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>
@@ -90,7 +90,7 @@ const MissingLink = () => {
               see!
             </p>
           </div>
-          <div className="card card_three">
+          <div className="final_card card_three">
             <FiBookOpen className="icon"></FiBookOpen>
             <h1>Heading</h1>
             <p>

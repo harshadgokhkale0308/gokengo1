@@ -41,7 +41,7 @@ const Impact = () => {
           ease: Power3.easeOut,
         })
     }
-  }, [inView])
+  }, [inView, tl])
 
   return (
     <div className="container">
