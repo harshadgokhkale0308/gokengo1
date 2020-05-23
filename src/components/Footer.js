@@ -2,13 +2,12 @@ import React, { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { Link } from "gatsby"
 import { TimelineLite, Power3 } from "gsap"
-import InView, { useInView } from "react-intersection-observer"
+import { useInView } from "react-intersection-observer"
 
 const Footer = () => {
   const { register, handleSubmit } = useForm()
-  const onSubmit = data => {
+  const onSubmitFooter = data => {
     console.log(data)
-    console.log("This is called")
   }
 
   const [footerref, inView] = useInView({
@@ -68,7 +67,7 @@ const Footer = () => {
           <div className="signup_heading">
             <div className="inner_text">Sign up for updates</div>
           </div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmitFooter)}>
             <input
               type="text"
               placeholder="enter your email"

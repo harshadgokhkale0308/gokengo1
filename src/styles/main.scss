@@ -1,7 +1,7 @@
 @import "./import-media.scss";
 @import "./variables.scss";
 
-// Components
+// Header Components
 @import "./components/navbar.scss";
 @import "./components/header.scss";
 @import "./components/summary.scss";
@@ -10,6 +10,13 @@
 @import "./components/missinglink.scss";
 @import "./components/requestdemo.scss";
 @import "./components/footer.scss";
+
+// About Components
+@import "./components/aboutheader.scss";
+@import "./components/aboutsectionone.scss";
+@import "./components/aboutsectiontwo.scss";
+@import "./components/demobanner.scss";
+
 body,
 html {
   user-select: none;
@@ -18,8 +25,9 @@ html {
   font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $white;
+  background: white;
   overflow-x: hidden;
+  transition: all 0.4s ease-in-out;
 
   .container {
     width: 100vw;

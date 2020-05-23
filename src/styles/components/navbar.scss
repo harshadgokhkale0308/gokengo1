@@ -6,9 +6,21 @@
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  width: 80vw;
   color: $black;
+  width: 80vw;
   z-index: 1000;
+
+  .logo {
+    transition: all 0.2s ease-in-out;
+    height: 2rem;
+    width: 2rem;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
   nav ul {
     text-decoration: none;
@@ -16,6 +28,11 @@
     li {
       display: inline-block;
       padding: 1rem;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.5;
+      }
 
       a {
         text-decoration: none;
@@ -25,10 +42,15 @@
     }
     button {
       background: $black;
+      mix-blend-mode: difference;
       border: 0px;
       padding: 0.8rem;
       margin: 1rem;
       color: $white;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

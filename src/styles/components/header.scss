@@ -59,6 +59,7 @@
   }
   form {
     position: relative;
+    z-index: 1000;
     top: 25vh;
     .input {
       background: $input;

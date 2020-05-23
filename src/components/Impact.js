@@ -26,7 +26,7 @@ const Impact = () => {
             y: 10,
             ease: Power3.easeOut,
           },
-          "-=0.1"
+          "-=0.6"
         )
         .from(".money_text", 0.4, { opacity: 0, y: 10, ease: Power3.easeOut })
         .staggerFrom(

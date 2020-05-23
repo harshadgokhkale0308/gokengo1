@@ -4,7 +4,7 @@ import MainVideo from "../videos/main.mp4"
 import lottie from "lottie-web"
 
 // Preloading Animation
-import preloadingAnim from "../lottie/preloader.json"
+import preloadingAnim from "../lottie/preloaderBlack.json"
 
 const Header = () => {
   let preloaderContainer = useRef(null)
@@ -56,10 +56,10 @@ const Header = () => {
           </div>
         </div>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          The ultimate goal of any operations system – Manufacturing | Retail |
+          Healthcare – is to be intelligent enough to discover knowledge, make
+          decisions and deliver actions independently. GokenGO platform provides
+          a framework to build such an intelligent system
         </p>
         <form>
           <input
