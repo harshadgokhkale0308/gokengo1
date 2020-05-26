@@ -7,6 +7,13 @@
   position: relative;
   top: 40vh;
   height: 100vh;
+  @include media("<=phone") {
+    height: 130vh;
+  }
+
+  @include media(">=phone", "<=tablet") {
+    height: 130vh;
+  }
 
   .content_wrapper {
     display: flex;
@@ -20,17 +27,18 @@
       z-index: 200;
       height: 1000px;
       width: 1000px;
-    }
-    .heading_wrapper {
-      display: flex;
-      margin: 0px;
-      align-items: center;
-      height: 150px;
-      overflow: hidden;
-      z-index: 200;
-      h1 {
-        font-size: 12rem;
-        margin: 0;
+      @include media("<=phone") {
+        height: 300px;
+        width: 300px;
+      }
+
+      @include media(">=phone", "<=tablet") {
+        height: 300px;
+        width: 300px;
+      }
+      @include media(">=tablet", "<=desktop") {
+        height: 700px;
+        width: 700px;
       }
     }
 
@@ -56,11 +64,38 @@
     text-align: center;
     font-family: "Open Sans";
     opacity: 0.5;
+    @include media("<=phone") {
+      font-size: 10px;
+      width: 80%;
+      top: 30vh;
+    }
+
+    @include media(">=phone", "<=tablet") {
+      font-size: 14px;
+      width: 80%;
+      top: 30vh;
+    }
   }
   form {
     position: relative;
     z-index: 1000;
     top: 25vh;
+    @include media("<=phone") {
+      top: 30vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include media(">=phone", "<=tablet") {
+      top: 35vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @include media(">=tablet", "<=desktop") {
+    }
+
     .input {
       background: $input;
       border: 0px;

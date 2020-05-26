@@ -6,6 +6,19 @@
   align-items: center;
   flex-direction: column;
   width: 70vw;
+
+  @include media("<phone") {
+    height: 95vh;
+  }
+
+  @include media(">=phone", "<=tablet") {
+    height: 120vh;
+  }
+
+  @include media(">=tablet", "<=desktop") {
+    height: 190vh;
+  }
+
   .heading {
     h1 {
       font-size: 4rem;
@@ -15,6 +28,19 @@
       margin: 0 auto;
       overflow: hidden;
       height: 80px;
+      @include media("<phone") {
+        font-size: 2rem;
+        height: 40px;
+      }
+
+      @include media(">=phone", "<=tablet") {
+        font-size: 2.2rem;
+        height: 50px;
+      }
+      @include media(">=tablet", "<=desktop") {
+        font-size: 3.2rem;
+        height: 70px;
+      }
     }
     p {
       font-family: "Open Sans";
@@ -23,6 +49,19 @@
       font-size: 1.5rem;
       opacity: 0.5;
       color: $black;
+      @include media("<phone") {
+        font-size: 0.8rem;
+        width: 300px;
+      }
+
+      @include media(">=phone", "<tablet") {
+        font-size: 1rem;
+        width: 300px;
+      }
+      @include media(">=tablet", "<=desktop") {
+        font-size: 2rem;
+        width: 600px;
+      }
     }
   }
 
@@ -33,6 +72,17 @@
     justify-self: center;
     video {
       width: 60vw;
+
+      @include media("<phone") {
+        width: 100vw;
+      }
+
+      @include media(">=phone", "<tablet") {
+        width: 100vw;
+      }
+      @include media(">=tablet", "<=desktop") {
+        width: 80vw;
+      }
     }
   }
   p {
@@ -42,6 +92,19 @@
     font-size: 1.5rem;
     opacity: 0.5;
     color: $black;
+    @include media("<phone") {
+      width: 300px;
+      font-size: 0.7rem;
+    }
+
+    @include media(">=phone", "<tablet") {
+      width: 300px;
+      font-size: 0.8rem;
+    }
+    @include media(">=tablet", "<=desktop") {
+      width: 500px;
+      font-size: 1rem;
+    }
   }
   .learn_how_btn {
     background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);

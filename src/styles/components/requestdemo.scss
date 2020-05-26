@@ -7,10 +7,27 @@
   justify-content: center;
   height: 120vh;
   width: 70vw;
+  @include media("<phone") {
+    height: auto;
+  }
+
+  @include media(">=phone", "<tablet") {
+    height: auto;
+  }
+
   form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    flex-direction: column;
+    @include media("<phone") {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include media(">=phone", "<tablet") {
+      display: flex;
+      flex-direction: column;
+    }
+
     .input_wrapper {
       display: flex;
       flex-direction: column;
@@ -23,6 +40,12 @@
         margin: 2rem;
         opacity: 0.9;
         font-family: "Open Sans";
+        @include media("<phone") {
+          margin: 0rem;
+        }
+        @include media(">=phone", "<tablet") {
+          margin: 0rem;
+        }
       }
       .error {
         color: red;
@@ -41,6 +64,12 @@
       background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
       color: $white;
       transition: all 0.2s ease-in-out;
+      @include media("<phone") {
+        margin: 1rem;
+      }
+      @include media(">=phone", "<tablet") {
+        margin: 1rem;
+      }
       &:hover {
         transform: scale(1.1);
       }

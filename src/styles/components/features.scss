@@ -1,16 +1,45 @@
 .grid_wrapper {
   position: relative;
   top: 10vh;
-  height: 200vh;
+  height: auto;
+  @include media("<phone") {
+    top: -2vh;
+    height: auto;
+  }
+
+  @include media(">=phone", "<tablet") {
+    top: -2vh;
+    height: auto;
+  }
+  @include media(">=tablet", "<=desktop") {
+    top: 0vh;
+    height: auto;
+  }
+  @include media(">=desktop", "<mddesktop") {
+    height: 150vh;
+  }
 }
 .features_wrapper {
   position: relative;
   flex-direction: column;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-self: flex-start;
   width: 100vw;
+  @include media("<phone") {
+    display: flex;
+  }
+
+  @include media(">=phone", "<tablet") {
+    display: flex;
+  }
+  @include media(">=tablet", "<=desktop") {
+    display: flex;
+  }
+  @include media(">=desktop", "<mddesktop") {
+    display: grid;
+  }
   .feature_content {
     padding: 2rem;
     grid-column: 1 / span 2;
@@ -24,7 +53,6 @@
 
   .card {
     margin: 0;
-    padding: 0;
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -74,7 +102,7 @@
         hsla(0, 0%, 0%, 0.668) 83.6%,
         hsla(0, 0%, 0%, 0.721) 88.7%,
         hsla(0, 0%, 0%, 0.762) 94.1%,
-        hsla(0, 0%, 0%, 0.79) 100%
+        hsla(0, 0%, 0%, 1) 100%
       );
       transform: translateY(-50%);
       transition: transform 1400ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -95,13 +123,39 @@
     font-size: 2rem;
     font-weight: bold;
     line-height: 1;
+    @include media("<phone") {
+      font-size: 25px;
+    }
+
+    @include media(">=phone", "<tablet") {
+      font-size: 25px;
+    }
+    @include media(">=tablet", "<=desktop") {
+      font-size: 30px;
+    }
+    @include media(">=desktop", "<mddesktop") {
+      font-size: 30px;
+    }
   }
 
   .copy {
     font-family: "Open Sans";
-    font-size: 1.125rem;
+    font-size: 0.8rem;
     font-style: italic;
     line-height: 1.35;
+    @include media("<phone") {
+      font-size: 12px;
+    }
+
+    @include media(">=phone", "<tablet") {
+      font-size: 15px;
+    }
+    @include media(">=tablet", "<=desktop") {
+      font-size: 18px;
+    }
+    @include media(">=desktop", "<mddesktop") {
+      font-size: 12px;
+    }
   }
 
   .btn {
@@ -113,7 +167,7 @@
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: white;
-    background-color: black;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
     border: none;
 
     &:focus {

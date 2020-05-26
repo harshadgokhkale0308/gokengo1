@@ -1,14 +1,34 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import lottie from "lottie-web"
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+import notFoundAnim from "../lottie/404.json"
+
+const NotFoundPage = () => {
+  let animationContainer = useRef(null)
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: animationContainer,
+      animationData: notFoundAnim,
+      loop: true,
+    })
+  }, [])
+
+  return (
+    <Layout>
+      <SEO title="404: Not found" />
+      <div className="container">
+        <div className="not_found_page">
+          <div
+            className="animation_wrappper"
+            ref={el => (animationContainer = el)}
+          ></div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
 
 export default NotFoundPage

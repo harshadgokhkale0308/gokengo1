@@ -1,4 +1,4 @@
-@import "./import-media.scss";
+@import "./include-media.scss";
 @import "./variables.scss";
 
 // Header Components
@@ -15,6 +15,9 @@
 @import "./components/aboutheader.scss";
 @import "./components/aboutsectionone.scss";
 @import "./components/demobanner.scss";
+
+// 404
+@import "./components/404.scss";
 
 body,
 html {
@@ -35,6 +38,7 @@ html {
     align-items: center;
     overflow: hidden;
     top: 20vh;
+    border: 0px;
   }
 }
 

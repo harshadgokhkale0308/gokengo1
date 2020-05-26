@@ -48,7 +48,6 @@ const Header = () => {
             className="stomp_preloader"
             ref={el => (preloaderContainer = el)}
           ></div>
-          {/* <div className="heading_wrapper"><h1>GokenGo.</h1></div> */}
           <div className="video_wrapper">
             <div className="revealer"></div>
             <video loop autoPlay muted>
