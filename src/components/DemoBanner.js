@@ -5,6 +5,7 @@ const DemoBanner = () => {
   const { register, handleSubmit, errors } = useForm()
   const onSubmitAbout = data => {
     console.log(data)
+    console.log(errors)
   }
 
   return (

@@ -14,12 +14,7 @@
 // About Components
 @import "./components/aboutheader.scss";
 @import "./components/aboutsectionone.scss";
-@import "./components/aboutsectiontwo.scss";
 @import "./components/demobanner.scss";
-
-// Team Components
-@import "./components/teamheader.scss";
-@import "./components/teamgrid.scss";
 
 body,
 html {
@@ -29,7 +24,7 @@ html {
   font-family: "Montserrat";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: white;
+  background: black;
   overflow-x: hidden;
   transition: all 0.4s ease-in-out;
 

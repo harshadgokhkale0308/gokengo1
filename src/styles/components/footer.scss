@@ -49,8 +49,8 @@
       width: 150px;
       padding: 1rem;
       border: 0px;
-      background: $white;
-      color: $black;
+      background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      color: $white;
       opacity: 1;
       transition: all 0.2s ease-in-out;
       cursor: pointer;

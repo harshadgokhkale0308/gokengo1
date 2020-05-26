@@ -1,22 +1,23 @@
 import React from "react"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 // Components
+import NavbarWhite from "../components/NavbarWhite"
 import AboutHeader from "../components/AboutHeader"
 import AboutSectionOne from "../components/AboutSectionOne"
-import AboutSectionTwo from "../components/AboutSectionTwo"
 import DemoBanner from "../components/DemoBanner"
+import Footer from "../components/Footer"
 
 const about = () => {
   return (
-    <Layout>
+    <>
       <SEO title="about" />
+      <NavbarWhite></NavbarWhite>
       <AboutHeader></AboutHeader>
       <AboutSectionOne></AboutSectionOne>
-      <AboutSectionTwo></AboutSectionTwo>
       <DemoBanner></DemoBanner>
-    </Layout>
+      <Footer></Footer>
+    </>
   )
 }
 

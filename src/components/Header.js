@@ -4,7 +4,7 @@ import MainVideo from "../videos/main.mp4"
 import lottie from "lottie-web"
 
 // Preloading Animation
-import preloadingAnim from "../lottie/preloaderBlack.json"
+import preloadingAnim from "../lottie/preloaderWhite.json"
 
 const Header = () => {
   let preloaderContainer = useRef(null)
@@ -12,6 +12,7 @@ const Header = () => {
   let tl = new TimelineLite()
 
   useEffect(() => {
+    document.body.style.backgroundColor = "black"
     const anim = lottie.loadAnimation({
       container: preloaderContainer,
       animationData: preloadingAnim,

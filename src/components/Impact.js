@@ -1,7 +1,12 @@
 import React, { useEffect } from "react"
-import { FaCentos } from "react-icons/fa"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
+
+// Icons
+
+import { AiOutlineFieldTime, AiOutlineFileDone } from "react-icons/ai"
+import { TiGroupOutline } from "react-icons/ti"
+import { DiGoogleAnalytics } from "react-icons/di"
 
 const Impact = () => {
   const [impactref, inView] = useInView({
@@ -44,7 +49,7 @@ const Impact = () => {
   }, [inView, tl])
 
   return (
-    <div className="container">
+    <div className="container bg_white">
       <div className="impact_wrapper" ref={impactref}>
         <div className="impact_content">
           <h1>
@@ -71,32 +76,20 @@ const Impact = () => {
 
         <div className="impact_nodes">
           <div className="impact_node">
-            <FaCentos className="icon"></FaCentos>
-            <p>
-              a simple tool to aggregate shift-wise information helped one of
-              our client create huge economic impact
-            </p>
+            <AiOutlineFieldTime className="icon"></AiOutlineFieldTime>
+            <p>Reduced time for data collection from 8 hours to 2 minutes</p>
           </div>
           <div className="impact_node">
-            <FaCentos className="icon"></FaCentos>
-            <p>
-              a simple tool to aggregate shift-wise information helped one of
-              our client create huge economic impact
-            </p>
+            <TiGroupOutline className="icon"></TiGroupOutline>
+            <p>Impacted 60 employees every shift</p>
           </div>
           <div className="impact_node">
-            <FaCentos className="icon"></FaCentos>
-            <p>
-              a simple tool to aggregate shift-wise information helped one of
-              our client create huge economic impact
-            </p>
+            <AiOutlineFileDone className="icon"></AiOutlineFileDone>
+            <p>Daily, Weekly and Monthly Report on single click</p>
           </div>
           <div className="impact_node">
-            <FaCentos className="icon"></FaCentos>
-            <p>
-              a simple tool to aggregate shift-wise information helped one of
-              our client create huge economic impact
-            </p>
+            <DiGoogleAnalytics className="icon"></DiGoogleAnalytics>
+            <p>25% Reduction in Manual Error</p>
           </div>
         </div>
       </div>

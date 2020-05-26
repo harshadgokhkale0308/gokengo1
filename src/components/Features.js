@@ -1,7 +1,7 @@
 import React from "react"
 const Features = () => {
   return (
-    <div className="container">
+    <div className="container bg_white">
       <div className="grid_wrapper">
         <div className="features_wrapper">
           <div className="feature_content">

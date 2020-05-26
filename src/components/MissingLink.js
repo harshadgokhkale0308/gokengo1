@@ -30,7 +30,7 @@ const MissingLink = () => {
   }, [inView, tl])
 
   return (
-    <div className="container">
+    <div className="container bg_white">
       <div className="missing_link_wrapper" ref={missingLinkRef}>
         <h1 className="heading">
           <div className="anim_text_wrapper">

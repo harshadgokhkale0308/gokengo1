@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
-import GokenLogo from "../assets/logoWhite.svg"
+import GokenLogo from "../assets/logoBlack.svg"
 
 const Navbar = () => {
   return (
     <div className="container">
-      <div className="nav_flex">
+      <div className="nav_flex nav_white">
         <div className="logo">
           <Link to="/">
             <GokenLogo></GokenLogo>

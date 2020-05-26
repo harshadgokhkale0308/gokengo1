@@ -4,6 +4,7 @@ import { TimelineLite, Power3 } from "gsap"
 const AboutHeader = () => {
   let tl = new TimelineLite()
   useEffect(() => {
+    document.body.style.backgroundColor = "white"
     tl.to(".about_header_wrapper", 0.1, {
       css: { visibility: "visible" },
     })

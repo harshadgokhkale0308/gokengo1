@@ -47,7 +47,7 @@ const Footer = () => {
           0.5
         )
     }
-  }, [inView])
+  }, [inView, tl])
   return (
     <div className="container bg_black">
       <div className="footer_wrapper">
@@ -97,7 +97,7 @@ const Footer = () => {
           </h1>
         </div>
         <div className="footer_links">
-          <ul>
+          {/* <ul>
             <li>
               <div className="link">
                 <a href="#">Industries</a>
@@ -108,24 +108,16 @@ const Footer = () => {
                 <a href="#">Platform</a>
               </div>
             </li>
-
             <li>
               <div className="link">
                 <a href="#">Case Studies</a>
               </div>
             </li>
-          </ul>
+          </ul> */}
           <ul>
             <li>
               <div className="link">
                 <Link to="/about">About.</Link>
-              </div>
-            </li>
-            <li>
-              <div className="link">
-                <Link className="link" to="/team">
-                  Team.
-                </Link>
               </div>
             </li>
             <li>

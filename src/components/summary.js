@@ -1,25 +1,9 @@
 import React, { useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
-import Img from "gatsby-image"
+import mockup from "../assets/mockup.mp4"
 
 const Summary = () => {
-  const data = useStaticQuery(graphql`
-    query Images {
-      Image: file(relativePath: { eq: "placeholder.jpg" }) {
-        id
-        childImageSharp {
-          fixed(width: 350, height: 350) {
-            ...GatsbyImageSharpFixed
-          }
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
   const [ref, inView] = useInView({
     threshold: 0,
     triggerOnce: true,
@@ -32,15 +16,20 @@ const Summary = () => {
         ease: Power3.easeOut,
       })
         .from(".heading p", 0.8, { opacity: 0, y: 20, ease: Power3.easeOut })
-        .staggerFrom(
-          ".summary_video",
-          1,
+        .from(".summary_video_wrapper", 1, {
+          opacity: 0,
+          y: 200,
+          ease: Power3.easeOut,
+        })
+        .from(
+          ".below_video_text",
+          0.6,
           {
             opacity: 0,
-            y: 200,
+            y: 20,
             ease: Power3.easeOut,
           },
-          0.2
+          "-=0.6"
         )
     }
   }, [inView, tl])
@@ -57,34 +46,17 @@ const Summary = () => {
             powered by the inbuilt shift handover process.
           </p>
         </div>
-        <div className="summary_videos_wrapper">
-          <div className="summary_video">
-            <Img fixed={data.Image.childImageSharp.fixed}></Img>
-            <div className="heading">Heading</div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-
-          <div className="summary_video">
-            <Img fixed={data.Image.childImageSharp.fixed}></Img>
-            <div className="heading">Heading</div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
-
-          <div className="summary_video">
-            <Img fixed={data.Image.childImageSharp.fixed}></Img>
-            <div className="heading">Heading</div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-          </div>
+        <div className="summary_video_wrapper">
+          <video autoPlay loop muted>
+            <source src={mockup} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+        <p className="below_video_text">
+          Technology enabled by the internet and smartphones are ubiquitous in
+          our personal lives. Why not use technology to empower us at works ?
+        </p>
+        <button className="learn_how_btn">Learn How</button>
       </div>
     </div>
   )
