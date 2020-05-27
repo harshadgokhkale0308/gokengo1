@@ -1,6 +1,7 @@
 .missing_link_wrapper {
   display: flex;
   margin: 10vh;
+  margin-top: -10vh;
   flex-direction: column;
   position: relative;
   @include media("<phone") {

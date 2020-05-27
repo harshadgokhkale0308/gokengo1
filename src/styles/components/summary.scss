@@ -1,11 +1,10 @@
 .summary_wrapper {
   position: relative;
-  top: 10vh;
-  height: 160vh;
+  height: 80vh;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 70vw;
+  flex-direction: row;
+  width: 90vw;
 
   @include media("<phone") {
     height: 95vh;
@@ -20,34 +19,16 @@
   }
 
   .heading {
-    h1 {
-      font-size: 4rem;
-      display: flex;
-      align-content: center;
-      justify-content: center;
-      margin: 0 auto;
-      overflow: hidden;
-      height: 80px;
-      @include media("<phone") {
-        font-size: 2rem;
-        height: 40px;
-      }
-
-      @include media(">=phone", "<=tablet") {
-        font-size: 2.2rem;
-        height: 50px;
-      }
-      @include media(">=tablet", "<=desktop") {
-        font-size: 3.2rem;
-        height: 70px;
-      }
-    }
-    p {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    .head_text {
+      font-weight: 600;
       font-family: "Open Sans";
-      text-align: center;
+      text-align: left;
       width: 600px;
       font-size: 1.5rem;
-      opacity: 0.5;
+      opacity: 1;
       color: $black;
       @include media("<phone") {
         font-size: 0.8rem;
@@ -71,7 +52,7 @@
     align-self: center;
     justify-self: center;
     video {
-      width: 60vw;
+      width: 40vw;
 
       @include media("<phone") {
         width: 100vw;
@@ -85,27 +66,7 @@
       }
     }
   }
-  p {
-    font-family: "Open Sans";
-    text-align: center;
-    width: 600px;
-    font-size: 1.5rem;
-    opacity: 0.5;
-    color: $black;
-    @include media("<phone") {
-      width: 300px;
-      font-size: 0.7rem;
-    }
 
-    @include media(">=phone", "<tablet") {
-      width: 300px;
-      font-size: 0.8rem;
-    }
-    @include media(">=tablet", "<=desktop") {
-      width: 500px;
-      font-size: 1rem;
-    }
-  }
   .learn_how_btn {
     background: #fc466b; /* fallback for old browsers */
     background: -webkit-linear-gradient(
@@ -120,10 +81,10 @@
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     border: 0px;
+    width: 50%;
     padding: 1.5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    margin: 1rem;
     color: white;
     transition: transform 0.2s ease-in-out;
     &:hover {
