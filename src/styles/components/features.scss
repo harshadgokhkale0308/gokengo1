@@ -16,7 +16,7 @@
     height: auto;
   }
   @include media(">=desktop", "<mddesktop") {
-    height: 150vh;
+    height: 170vh;
   }
 }
 .features_wrapper {
@@ -167,7 +167,18 @@
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: white;
-    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background: #fc466b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #3f5efb,
+      #fc466b
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #3f5efb,
+      #fc466b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     border: none;
 
     &:focus {
@@ -231,7 +242,7 @@
     align-items: center;
     justify-content: center;
     .card_one {
-      background-image: url(https://images.unsplash.com/photo-1567789884554-0b844b597180?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+      background-image: url(https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -246,7 +257,7 @@
     align-items: center;
     justify-content: center;
     .card_two {
-      background-image: url(https://images.unsplash.com/photo-1532186773960-85649e5cb70b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80);
+      background-image: url(https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -261,7 +272,7 @@
     align-items: center;
     justify-content: center;
     .card_three {
-      background-image: url(https://images.unsplash.com/photo-1564182842834-681b7be6de4b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80);
+      background-image: url(https://img.techpowerup.org/200527/delegate.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -276,7 +287,7 @@
     align-items: center;
     justify-content: center;
     .card_four {
-      background-image: url(https://images.unsplash.com/photo-1518704618243-b719e5d5f2b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+      background-image: url(https://img.techpowerup.org/200527/optimized-measure-min.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -291,7 +302,7 @@
     align-items: center;
     justify-content: center;
     .card_five {
-      background-image: url(https://images.unsplash.com/photo-1488210740273-efea3f883282?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+      background-image: url(https://images.pexels.com/photos/3912956/pexels-photo-3912956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -305,7 +316,7 @@
     align-items: center;
     justify-content: center;
     .card_six {
-      background-image: url(https://images.unsplash.com/photo-1566930665082-4ae9dbbb5b6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+      background-image: url(https://images.pexels.com/photos/2965260/pexels-photo-2965260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

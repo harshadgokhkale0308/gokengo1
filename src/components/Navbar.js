@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import GokenLogo from "../assets/logoWhite.svg"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Navbar = () => {
   return (
@@ -16,7 +17,12 @@ const Navbar = () => {
             <li>
               <Link to="/about">about</Link>
             </li>
-            <button className="request_demo_btn">Request a Demo</button>
+            <button
+              onClick={() => scrollTo("#demo")}
+              className="request_demo_btn"
+            >
+              Request a Demo
+            </button>
           </ul>
         </nav>
       </div>

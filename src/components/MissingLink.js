@@ -1,7 +1,12 @@
 import React, { useEffect } from "react"
-import { FiBookOpen } from "react-icons/fi"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
+
+//Icons
+
+import { AiFillDatabase } from "react-icons/ai"
+import { GoIssueClosed } from "react-icons/go"
+import { DiGoogleAnalytics } from "react-icons/di"
 
 const MissingLink = () => {
   const [missingLinkRef, inView] = useInView({
@@ -46,8 +51,8 @@ const MissingLink = () => {
         </p>
         <div className="cards_holder">
           <div className="final_card card_one">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
+            <AiFillDatabase className="icon"></AiFillDatabase>
+            <h1>Data Acquisition</h1>
             <p>
               We will not just provide the tools to get the job done, we will
               help you with the process and the results are there for you to
@@ -55,8 +60,8 @@ const MissingLink = () => {
             </p>
           </div>
           <div className="final_card card_two">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
+            <GoIssueClosed className="icon"></GoIssueClosed>
+            <h1>Issue Management</h1>
             <p>
               We will not just provide the tools to get the job done, we will
               help you with the process and the results are there for you to
@@ -64,35 +69,8 @@ const MissingLink = () => {
             </p>
           </div>
           <div className="final_card card_three">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
-            <p>
-              We will not just provide the tools to get the job done, we will
-              help you with the process and the results are there for you to
-              see!
-            </p>
-          </div>
-          <div className="final_card card_one">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
-            <p>
-              We will not just provide the tools to get the job done, we will
-              help you with the process and the results are there for you to
-              see!
-            </p>
-          </div>
-          <div className="final_card card_two">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
-            <p>
-              We will not just provide the tools to get the job done, we will
-              help you with the process and the results are there for you to
-              see!
-            </p>
-          </div>
-          <div className="final_card card_three">
-            <FiBookOpen className="icon"></FiBookOpen>
-            <h1>Heading</h1>
+            <DiGoogleAnalytics className="icon"></DiGoogleAnalytics>
+            <h1>Data Analytics</h1>
             <p>
               We will not just provide the tools to get the job done, we will
               help you with the process and the results are there for you to

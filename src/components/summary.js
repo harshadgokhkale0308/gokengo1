@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
-import mockup from "../assets/mockup.mp4"
+import mockup from "../assets/mock.mp4"
 
 const Summary = () => {
   const [ref, inView] = useInView({

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { Link } from "gatsby"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Footer = () => {
   const { register, handleSubmit } = useForm()
@@ -54,7 +55,7 @@ const Footer = () => {
         <div className="footer_heading" ref={footerref}>
           <h1>
             <div className="anim_text_wrapper">
-              <div className="text">Goken Go.</div>
+              <div className="text">GokenGo.</div>
             </div>
           </h1>
           <p>
@@ -82,6 +83,7 @@ const Footer = () => {
             <div className="office_text">Offices</div>
           </div>
           <h1>
+            <div className="office_heading_text">India</div>
             <div className="anim_text_wrapper">
               <div className="office_text">
                 3rd Floor, Alacrity India Innovation Center, Pune, Maharashtra
@@ -90,6 +92,7 @@ const Footer = () => {
             </div>
           </h1>
           <h1>
+            <div className="office_heading_text">United States</div>
             <div className="anim_text_wrapper">
               <div className="office_text">
                 5100 Parkcenter Avenue Dublin, Ohio 43017 USA
@@ -130,7 +133,7 @@ const Footer = () => {
             </li>
             <li>
               <div className="link">
-                <a className="link" href="#">
+                <a className="link" onClick={() => scrollTo("#demo")}>
                   Contact.
                 </a>
               </div>

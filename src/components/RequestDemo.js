@@ -10,7 +10,7 @@ const RequestDemo = () => {
   console.log(errors)
 
   return (
-    <div className="container bg_white">
+    <div className="container bg_white" id="demo">
       <div className="request_demo_wrapper">
         <h1>Request Demo</h1>
         <form onSubmit={handleSubmit(onSubmit)}>

@@ -78,26 +78,26 @@ const Impact = () => {
           <div className="impact_node">
             <AiOutlineFieldTime className="icon"></AiOutlineFieldTime>
             <p>
-              Reduced time for data collection from <b>8</b> hours to <b>2</b>{" "}
-              minutes
+              Reduced time for data collection from <span>8</span> hours to{" "}
+              <span>2</span> minutes
             </p>
           </div>
           <div className="impact_node">
             <TiGroupOutline className="icon"></TiGroupOutline>
             <p>
-              Impacted <b>60 employees</b> every shift
+              Impacted <span>60 employees</span> every shift
             </p>
           </div>
           <div className="impact_node">
             <AiOutlineFileDone className="icon"></AiOutlineFileDone>
             <p>
-              Daily, Weekly and Monthly Report on <b>single click</b>
+              Daily, Weekly and Monthly Report on <span>single click</span>
             </p>
           </div>
           <div className="impact_node">
             <DiGoogleAnalytics className="icon"></DiGoogleAnalytics>
             <p>
-              <b>25%</b> Reduction in Manual Error
+              <span>25%</span> Reduction in Manual Error
             </p>
           </div>
         </div>
