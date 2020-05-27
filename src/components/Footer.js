@@ -84,7 +84,8 @@ const Footer = () => {
           <h1>
             <div className="anim_text_wrapper">
               <div className="office_text">
-                26 rue Burdeau 69001 Lyon France
+                3rd Floor, Alacrity India Innovation Center, Pune, Maharashtra
+                411057, IN
               </div>
             </div>
           </h1>

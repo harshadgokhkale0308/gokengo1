@@ -6,7 +6,7 @@ const Features = () => {
         <div className="features_wrapper">
           <div className="feature_content">
             <h1>
-              our platform brings <br></br>it all together.
+              Our Platform brings <br></br>it all Together.
             </h1>
             <p>
               GokenGo is a 24 hour operations monitoring that enables huge
