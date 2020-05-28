@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react"
 import { TimelineLite, Power3 } from "gsap"
-import MainVideo from "../videos/main.mp4"
+import MainVideo from "../assets/smallVideo.mp4"
 import lottie from "lottie-web"
 
 // Preloading Animation

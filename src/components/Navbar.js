@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
 import React from "react"
-import GokenLogo from "../assets/logoWhite.svg"
+import GokenLogo from "../assets/logo.svg"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
 const Navbar = () => {
   return (
-    <div className="container">
+    <div className="container bg_transparent">
       <div className="nav_flex">
         <div className="logo">
           <Link to="/">

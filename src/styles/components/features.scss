@@ -17,6 +17,9 @@
   @include media(">=desktop", "<mddesktop") {
     height: 170vh;
   }
+  @include media(">mddesktop", "<=lgdesktop") {
+    height: 120vh;
+  }
 }
 .features_wrapper {
   position: relative;
@@ -36,17 +39,20 @@
   @include media(">=tablet", "<=desktop") {
     display: flex;
   }
-  @include media(">=desktop", "<mddesktop") {
-    display: grid;
-  }
   .feature_content {
     padding: 2rem;
     grid-column: 1 / span 2;
     h1 {
       font-size: 3rem;
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 3.5rem;
+      }
     }
     p {
       font-family: "Open Sans";
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -135,6 +141,9 @@
     @include media(">=desktop", "<mddesktop") {
       font-size: 30px;
     }
+    @include media(">mddesktop", "<=lgdesktop") {
+      font-size: 45px;
+    }
   }
 
   .copy {
@@ -154,6 +163,9 @@
     }
     @include media(">=desktop", "<mddesktop") {
       font-size: 12px;
+    }
+    @include media(">mddesktop", "<=lgdesktop") {
+      font-size: 15px;
     }
   }
 

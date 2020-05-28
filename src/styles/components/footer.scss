@@ -40,6 +40,9 @@
       @include media(">=phone", "<tablet") {
         font-size: 2rem;
       }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 7rem;
+      }
       .anim_text_wrapper {
         overflow: hidden;
       }
@@ -60,6 +63,9 @@
         margin-top: 0rem;
         width: 90%;
       }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -79,6 +85,9 @@
       font-size: 1.5rem;
       overflow: hidden;
       margin: 1rem;
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 2.5rem;
+      }
     }
     input {
       background: #101010;
@@ -89,6 +98,11 @@
       opacity: 0.9;
       font-family: "Open Sans";
       opacity: 1;
+      @include media(">mddesktop", "<=lgdesktop") {
+        width: 400px;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+      }
     }
     .submitBtn {
       width: 150px;
@@ -132,12 +146,18 @@
       font-weight: 700;
       align-self: flex-start;
       overflow: hidden;
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 3.5rem;
+      }
     }
     h1 {
       font-size: 1rem;
       font-weight: 400;
       font-family: "Open Sans";
       opacity: 0.5;
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 1.8rem;
+      }
       .anim_text_wrapper {
         overflow: hidden;
       }
@@ -165,6 +185,9 @@
           color: white;
           font-size: 1.2rem;
           cursor: pointer;
+          @include media(">mddesktop", "<=lgdesktop") {
+            font-size: 2.5rem;
+          }
         }
         &:hover {
           transform: scale(1.1) !important;

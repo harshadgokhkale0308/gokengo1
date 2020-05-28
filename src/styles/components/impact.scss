@@ -23,8 +23,8 @@
     align-items: center;
     height: 200vh;
   }
-  @include media(">=desktop", "<mddesktop") {
-    display: grid;
+  @include media(">mddesktop", "<=lgdesktop") {
+    height: 90vh;
   }
   .impact_content {
     grid-column: 1 / span 2;
@@ -45,6 +45,9 @@
     @include media(">=tablet", "<=desktop") {
       padding: 2rem;
     }
+    @include media(">mddesktop", "<=lgdesktop") {
+      padding: 6rem;
+    }
     h1 {
       font-size: 4rem;
       @include media("<phone") {
@@ -53,6 +56,9 @@
 
       @include media(">=phone", "<tablet") {
         font-size: 2rem;
+      }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 5.5rem;
       }
       .wrapper_anim_text {
         overflow: hidden;
@@ -77,6 +83,9 @@
       @include media(">=desktop", "<mddesktop") {
         margin-top: 0rem;
       }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 2rem;
+      }
     }
     .money_text {
       display: flex;
@@ -94,9 +103,15 @@
       @include media(">=desktop", "<mddesktop") {
         font-size: 3rem;
       }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 6rem;
+      }
       span {
         font-size: 1rem;
         font-weight: 500;
+        @include media(">mddesktop", "<=lgdesktop") {
+          font-size: 2rem;
+        }
       }
     }
     .requestDemoBtn {
@@ -120,6 +135,10 @@
       padding: 1rem;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
+      @include media(">mddesktop", "<=lgdesktop") {
+        padding: 2rem;
+        font-size: 1.8rem;
+      }
       &:hover {
         transform: scale(1.1) !important;
       }
@@ -163,6 +182,10 @@
       @include media(">=phone", "<tablet") {
         margin: 1rem;
       }
+      @include media(">mddesktop", "<=lgdesktop") {
+        padding: 1.5rem;
+        font-size: 2rem;
+      }
       &:hover {
         transform: scale(1.1) !important;
         color: white;
@@ -184,6 +207,9 @@
       span {
         font-weight: 800;
         font-size: 1.2rem;
+        @include media(">mddesktop", "<=lgdesktop") {
+          font-size: 2.5rem;
+        }
       }
     }
   }

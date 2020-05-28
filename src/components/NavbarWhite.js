@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import GokenLogo from "../assets/logoBlack.svg"
+import GokenLogo from "../assets/logo.svg"
 
 const Navbar = () => {
   return (

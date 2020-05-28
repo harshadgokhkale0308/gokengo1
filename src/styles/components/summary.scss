@@ -1,5 +1,6 @@
 .summary_wrapper {
   position: relative;
+  top: 10vh;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -7,15 +8,26 @@
   width: 90vw;
 
   @include media("<phone") {
-    height: 95vh;
+    top: 5vh;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @include media(">=phone", "<=tablet") {
-    height: 120vh;
+    top: 5vh;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
   }
 
   @include media(">=tablet", "<=desktop") {
+    top: 0vh;
     height: 190vh;
+    flex-direction: column-reverse;
+  }
+  @include media(">mddesktop", "<=lgdesktop") {
+    top: 0vh;
   }
 
   .heading {
@@ -31,17 +43,47 @@
       opacity: 1;
       color: $black;
       @include media("<phone") {
-        font-size: 0.8rem;
+        font-size: 1rem;
         width: 300px;
+        text-align: center;
       }
 
       @include media(">=phone", "<tablet") {
         font-size: 1rem;
         width: 300px;
+        text-align: center;
       }
       @include media(">=tablet", "<=desktop") {
         font-size: 2rem;
         width: 600px;
+        text-align: center;
+      }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 2.2rem;
+      }
+    }
+    p {
+      font-family: "Open Sans";
+      text-align: left;
+      @include media("<phone") {
+        font-size: 1rem;
+        width: 300px;
+        text-align: center;
+      }
+
+      @include media(">=phone", "<tablet") {
+        font-size: 1rem;
+        width: 300px;
+        text-align: center;
+      }
+      @include media(">=tablet", "<=desktop") {
+        font-size: 1rem;
+        width: 600px;
+        text-align: center;
+      }
+      @include media(">mddesktop", "<=lgdesktop") {
+        font-size: 1.5rem;
+        width: 80%;
       }
     }
   }
@@ -87,6 +129,20 @@
     padding-right: 2rem;
     color: white;
     transition: transform 0.2s ease-in-out;
+
+    @include media("<phone") {
+      width: 100%;
+    }
+
+    @include media(">=phone", "<tablet") {
+      width: 100%;
+    }
+    @include media(">=tablet", "<=desktop") {
+      align-self: center;
+    }
+    @include media(">mddesktop", "<=lgdesktop") {
+      font-size: 1.8rem;
+    }
     &:hover {
       transform: scale(1.1);
     }

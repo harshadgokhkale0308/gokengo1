@@ -1,6 +1,6 @@
 .request_demo_wrapper {
   position: relative;
-  top: 0vh;
+  top: -10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,11 +8,25 @@
   height: 120vh;
   width: 70vw;
   @include media("<phone") {
+    top: 0vh;
     height: auto;
   }
 
   @include media(">=phone", "<tablet") {
+    top: 0vh;
     height: auto;
+  }
+
+  @include media(">=tablet", "<=desktop") {
+    height: auto;
+    top: 0vh;
+    margin-bottom: 2vh;
+  }
+  @include media(">mddesktop", "<=lgdesktop") {
+    top: 0vh;
+    margin-bottom: 5vh;
+    height: auto;
+    font-size: 2.5rem;
   }
 
   form {
@@ -45,6 +59,11 @@
         }
         @include media(">=phone", "<tablet") {
           margin: 0rem;
+        }
+        @include media(">mddesktop", "<=lgdesktop") {
+          padding: 2rem;
+          font-size: 1.5rem;
+          width: 400px;
         }
       }
       .error {
@@ -80,6 +99,11 @@
       }
       @include media(">=phone", "<tablet") {
         margin: 1rem;
+      }
+      @include media(">mddesktop", "<=lgdesktop") {
+        padding: 2rem;
+        font-size: 2rem;
+        width: 400px;
       }
       &:hover {
         transform: scale(1.1);

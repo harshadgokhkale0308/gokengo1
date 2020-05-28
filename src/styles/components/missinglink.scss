@@ -1,7 +1,7 @@
 .missing_link_wrapper {
   display: flex;
   margin: 10vh;
-  margin-top: -10vh;
+  margin-top: -8vh;
   flex-direction: column;
   position: relative;
   @include media("<phone") {
@@ -16,8 +16,11 @@
   @include media(">=tablet", "<=desktop") {
     margin-top: 0vh;
   }
+  @include media(">mddesktop", "<=lgdesktop") {
+    margin-top: 5vh;
+  }
   .heading {
-    font-size: 4rem;
+    font-size: 3.8rem;
     @include media("<phone") {
       font-size: 1.2rem;
     }
@@ -27,6 +30,9 @@
     }
     @include media(">=tablet", "<=desktop") {
       font-size: 2.5rem;
+    }
+    @include media(">mddesktop", "<=lgdesktop") {
+      font-size: 6rem;
     }
     .anim_text_wrapper {
       overflow: hidden;
@@ -51,6 +57,9 @@
     @include media(">=tablet", "<=desktop") {
       font-size: 1.2rem;
       margin-top: -5px;
+    }
+    @include media(">mddesktop", "<=lgdesktop") {
+      font-size: 2.5rem;
     }
   }
 
@@ -78,6 +87,10 @@
       height: 200px;
       transition: all 0.2s ease-in-out;
       border-radius: 10px;
+      @include media(">mddesktop", "<=lgdesktop") {
+        padding: 2rem;
+        height: 300px;
+      }
 
       &:hover {
         transform: scale(1.1) !important;
@@ -86,16 +99,25 @@
       h1 {
         font-size: 1.2rem;
         font-weight: 500;
+        @include media(">mddesktop", "<=lgdesktop") {
+          font-size: 2rem;
+        }
       }
       p {
         font-family: "Open Sans";
         font-size: 0.8rem;
         font-weight: 500;
         opacity: 0.6;
+        @include media(">mddesktop", "<=lgdesktop") {
+          font-size: 1.2rem;
+        }
       }
       .icon {
         font-size: 3rem;
         margin-bottom: 20px;
+        @include media(">mddesktop", "<=lgdesktop") {
+          font-size: 4rem;
+        }
       }
     }
     .card_one {
