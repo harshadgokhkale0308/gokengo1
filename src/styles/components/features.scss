@@ -15,10 +15,7 @@
     height: auto;
   }
   @include media(">=desktop", "<mddesktop") {
-    height: 170vh;
-  }
-  @include media(">mddesktop", "<=lgdesktop") {
-    height: 120vh;
+    height: 150vh;
   }
 }
 .features_wrapper {
