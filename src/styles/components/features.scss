@@ -141,9 +141,6 @@
     @include media(">=desktop", "<mddesktop") {
       font-size: 30px;
     }
-    @include media(">mddesktop", "<=lgdesktop") {
-      font-size: 45px;
-    }
   }
 
   .copy {
@@ -163,9 +160,6 @@
     }
     @include media(">=desktop", "<mddesktop") {
       font-size: 12px;
-    }
-    @include media(">mddesktop", "<=lgdesktop") {
-      font-size: 15px;
     }
   }
 

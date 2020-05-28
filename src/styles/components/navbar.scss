@@ -26,9 +26,6 @@
   @include media(">desktop", "<=mddesktop") {
     position: absolute;
   }
-  @include media(">mddesktop", "<=lgdesktop") {
-    position: absolute;
-  }
 
   .logo {
     transition: all 0.1s ease-in-out;
@@ -47,10 +44,6 @@
     @include media(">=tablet", "<=desktop") {
       height: 1.5rem;
       width: 1.5rem;
-    }
-    @include media(">mddesktop", "<=lgdesktop") {
-      height: 3rem;
-      width: 3rem;
     }
     a {
       text-decoration: none;
@@ -79,9 +72,6 @@
       }
       @include media(">=tablet", "<=desktop") {
         padding: 0.2rem;
-      }
-      @include media(">mddesktop", "<=lgdesktop") {
-        font-size: 2rem;
       }
       &:hover {
         transform: scale(1.1);
@@ -125,10 +115,6 @@
       @include media(">=tablet", "<=desktop") {
         padding: 0.6rem;
         margin: 0.6rem;
-      }
-      @include media(">mddesktop", "<=lgdesktop") {
-        padding: 2rem;
-        font-size: 1.5rem;
       }
       &:hover {
         transform: scale(1.1);

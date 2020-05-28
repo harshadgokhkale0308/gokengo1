@@ -9,9 +9,6 @@
   width: 70vw;
   height: auto;
   margin-bottom: 20vh;
-  @include media(">mddesktop", "<=lgdesktop") {
-    top: 20vh;
-  }
 
   .about_header {
     h1 {
@@ -27,9 +24,6 @@
       @include media(">=tablet", "<=desktop") {
         font-size: 3rem;
       }
-      @include media(">mddesktop", "<=lgdesktop") {
-        font-size: 7rem;
-      }
     }
     p {
       margin-top: -2rem;
@@ -42,9 +36,6 @@
       @include media(">=phone", "<tablet") {
         font-size: 1.5rem;
         margin-top: 0;
-      }
-      @include media(">mddesktop", "<=lgdesktop") {
-        font-size: 3rem;
       }
     }
   }

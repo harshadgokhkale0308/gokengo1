@@ -15,18 +15,11 @@
 
     h1 {
       color: white;
-      @include media(">mddesktop", "<=lgdesktop") {
-        font-size: 3.5rem;
-      }
     }
     form {
       input {
         border: 0px;
         padding: 1rem;
-        @include media(">mddesktop", "<=lgdesktop") {
-          padding: 2.5rem;
-          font-size: 1.5rem;
-        }
       }
       .submitBtn {
         background: -webkit-linear-gradient(
@@ -42,9 +35,6 @@
 
         color: white;
         width: 150px;
-        @include media(">mddesktop", "<=lgdesktop") {
-          width: 200px;
-        }
       }
     }
   }

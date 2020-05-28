@@ -152,9 +152,4 @@
   @include media(">=tablet", "<=desktop") {
     display: none;
   }
-  @include media(">mddesktop", "<=lgdesktop") {
-    display: block;
-    top: -5vh;
-    height: 90vh;
-  }
 }

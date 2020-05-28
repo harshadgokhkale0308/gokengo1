@@ -22,12 +22,6 @@
     top: 0vh;
     margin-bottom: 2vh;
   }
-  @include media(">mddesktop", "<=lgdesktop") {
-    top: 0vh;
-    margin-bottom: 5vh;
-    height: auto;
-    font-size: 2.5rem;
-  }
 
   form {
     display: grid;
@@ -59,11 +53,6 @@
         }
         @include media(">=phone", "<tablet") {
           margin: 0rem;
-        }
-        @include media(">mddesktop", "<=lgdesktop") {
-          padding: 2rem;
-          font-size: 1.5rem;
-          width: 400px;
         }
       }
       .error {
@@ -99,11 +88,6 @@
       }
       @include media(">=phone", "<tablet") {
         margin: 1rem;
-      }
-      @include media(">mddesktop", "<=lgdesktop") {
-        padding: 2rem;
-        font-size: 2rem;
-        width: 400px;
       }
       &:hover {
         transform: scale(1.1);
