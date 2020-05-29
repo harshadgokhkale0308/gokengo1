@@ -59,9 +59,8 @@ const Footer = () => {
             </div>
           </h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
+            An operations Management Platform for the Factory Floor. Never miss
+            a beat , stay connected always !
           </p>
         </div>
         <div className="signup">

@@ -10,8 +10,9 @@ const Features = () => {
               Our Platform brings <br></br>it all Together.
             </h1>
             <p>
-              GokenGo is a 24 hour operations monitoring that enables huge
-              savings powered by the inbuilt shift handover process
+              GokenGo platform can enable manufacturing factory floor, process
+              plants, Oil & Gas sites and hospitals ICUs to go digital. It
+              captures the essence of continuity in daily operations.
             </p>
           </div>
           <div className="one">
@@ -20,8 +21,11 @@ const Features = () => {
                 <h2 className="title">Record</h2>
                 <div className="copy">
                   <h2>Why Record</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  Good manufacturing practice (GMP) regulations specify that
+                  manufacturer must maintain proper documentation and records.
+                  It helps to understand what a manufacturing function has done
+                  in the past and what it is doing now and, thus, it provides a
+                  basis for planning what it is going to do in the future.
                 </div>
                 <button className="btn">Learn More</button>
               </div>
@@ -33,8 +37,9 @@ const Features = () => {
                 <h2 className="title">Aggregate</h2>
                 <div className="copy">
                   <h2>Data from all departments</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  Heterogeneity of data sources and data types require a
+                  carefully designed data aggregation process that can receive
+                  data passively as well as actively
                 </div>
                 <button className="btn">Learn More</button>
               </div>
@@ -43,11 +48,13 @@ const Features = () => {
           <div className="three">
             <div className="card card_three">
               <div className="content">
-                <h2 className="title">Delegate</h2>
+                <h2 className="title">Measure</h2>
                 <div className="copy">
-                  <h2>Tasks to your team</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  <h2>Key Parameters</h2>
+                  Measurements records parameters that monitor the condition of
+                  an asset. It includes vibration data, acoustic data,
+                  temperature, pressure, moisture, humidity , environment data
+                  and many more
                 </div>
                 <button className="btn">Learn More</button>
               </div>
@@ -56,11 +63,14 @@ const Features = () => {
           <div className="four">
             <div className="card card_four">
               <div className="content">
-                <h2 className="title">Measure</h2>
+                <h2 className="title">Delegate</h2>
                 <div className="copy">
-                  <h2>Key Parameters</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  <h2>Tasks to your team</h2>
+                  Feedback is the most important part of the delegation process,
+                  and it works both ways. A tool that will help you complete the
+                  feedback loop can be highly effective for delegation. Without
+                  delegation, quality of work diminishes and increases chances
+                  of missing deadlines
                 </div>
                 <button className="btn">Learn More</button>
               </div>
@@ -72,8 +82,10 @@ const Features = () => {
                 <h2 className="title">Analyze</h2>
                 <div className="copy">
                   <h2>Shiftly dashoboards</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  Manufacturers need to continually apply analytics – asset by
+                  asset, line by line, process by process and plant by plant to
+                  capture the full value of the technology. Analytics dashboard
+                  is not a one-off exercise
                 </div>
                 <button className="btn">Learn More</button>
               </div>
@@ -86,8 +98,9 @@ const Features = () => {
                 <h2 className="title">Act</h2>
                 <div className="copy">
                   <h2>On Time</h2>
-                  Check out all of these gorgeous mountain trips with beautiful
-                  views of, you guessed it, the mountains
+                  Effective problem solving in manufacturing requires clear and
+                  decisive action. Decision making can be improved by systematic
+                  rational approach supported by good data management
                 </div>
                 <button className="btn">Learn More</button>
               </div>

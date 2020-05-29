@@ -33,7 +33,7 @@ const RequestDemo = () => {
               ref={register({ required: true, maxLength: 100 })}
             ></input>
             {errors.firstName && (
-              <div className="error">First name is required</div>
+              <div className="error">Last name is required</div>
             )}
           </div>
           <div className="input_wrapper">
@@ -55,6 +55,14 @@ const RequestDemo = () => {
           </div>
           <div className="input_wrapper">
             <input
+              type="text"
+              placeholder="Country"
+              name="Country"
+              ref={register}
+            />
+          </div>
+          <div className="input_wrapper">
+            <input
               type="tel"
               placeholder="Mobile"
               name="mobile"
@@ -64,14 +72,7 @@ const RequestDemo = () => {
               <div className="error">enter valid phonenumber</div>
             )}
           </div>
-          <div className="input_wrapper">
-            <input
-              type="text"
-              placeholder="Country"
-              name="Country"
-              ref={register}
-            />
-          </div>
+
           <div className="submit_btn_wrapper">
             <input className="submitBtn" type="submit" />
           </div>

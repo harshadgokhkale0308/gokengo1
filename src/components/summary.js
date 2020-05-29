@@ -40,7 +40,8 @@ const Summary = () => {
           </p>
           <p>
             Technology enabled by the internet and smartphones are ubiquitous in
-            our personal lives. Why not use technology to empower us at works ?
+            our personal lives. Why not use technology to empower us on the
+            factory floor.
           </p>
           <button className="learn_how_btn">Learn How</button>
         </div>

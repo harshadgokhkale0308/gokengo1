@@ -68,7 +68,7 @@ const Impact = () => {
             client create huge economic impact
           </p>
           <div className="money_text">
-            $25,0000
+            $250,000
             <span>saved annually</span>
           </div>
           <button className="requestDemoBtn">Request a Demo</button>
@@ -91,13 +91,14 @@ const Impact = () => {
           <div className="impact_node">
             <AiOutlineFileDone className="icon"></AiOutlineFileDone>
             <p>
-              Daily, Weekly and Monthly Report on <span>single click</span>
+              Published daily, weekly and monthly report on a{" "}
+              <span>single click</span>
             </p>
           </div>
           <div className="impact_node">
             <DiGoogleAnalytics className="icon"></DiGoogleAnalytics>
             <p>
-              <span>25%</span> Reduction in Manual Error
+              Reduced chances of manual errors by <span>25%</span>
             </p>
           </div>
         </div>
