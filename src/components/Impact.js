@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 // Icons
 
@@ -16,13 +17,7 @@ const Impact = () => {
   let tl = new TimelineLite()
   useEffect(() => {
     if (inView) {
-      tl.staggerFrom(
-        ".text_inner",
-        0.8,
-        { y: 100, ease: Power3.easeOut },
-        0.3,
-        0.6
-      )
+      tl.staggerFrom(".text_inner", 0.8, { y: 100, ease: Power3.easeOut }, 0.3)
         .from(
           ".impact_content p",
           0.2,
@@ -34,19 +29,18 @@ const Impact = () => {
           "-=0.6"
         )
         .from(".money_text", 0.4, { opacity: 0, y: 10, ease: Power3.easeOut })
-        .staggerFrom(
-          ".impact_node",
-          0.4,
-          { opacity: 0, y: 10, ease: Power3.easeOut },
-          0.2
-        )
+        .staggerFrom(".impact_node", 0.4, {
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeOut,
+        })
         .from(".requestDemoBtn", 0.4, {
           opacity: 0,
           y: 10,
           ease: Power3.easeOut,
         })
     }
-  }, [inView, tl])
+  }, [inView])
 
   return (
     <div className="container bg_white">
@@ -71,7 +65,9 @@ const Impact = () => {
             $250,000
             <span>saved annually</span>
           </div>
-          <button className="requestDemoBtn">Request a Demo</button>
+          <button onClick={() => scrollTo("#demo")} className="requestDemoBtn">
+            Request a Demo
+          </button>
         </div>
 
         <div className="impact_nodes">

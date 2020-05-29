@@ -66,7 +66,7 @@ const RequestDemo = () => {
               type="tel"
               placeholder="Mobile"
               name="mobile"
-              ref={register({ pattern: /^([9]{1})([234789]{1})([0-9]{8})$/i })}
+              ref={register({ pattern: /^([+]\d{2})?\d{10}$/ })}
             />
             {errors.mobile && (
               <div className="error">enter valid phonenumber</div>

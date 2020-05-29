@@ -1,7 +1,8 @@
 .missing_link_wrapper {
+  position: relative;
+  top: 4vh;
   display: flex;
   margin: 10vh;
-  margin-top: -8vh;
   flex-direction: column;
   position: relative;
   @include media("<phone") {
@@ -16,6 +17,9 @@
   @include media(">=tablet", "<=desktop") {
     margin-top: 0vh;
   }
+  @include media(">=4k") {
+    margin-top: 0;
+  }
   .heading {
     font-size: 3.8rem;
     @include media("<phone") {
@@ -27,6 +31,9 @@
     }
     @include media(">=tablet", "<=desktop") {
       font-size: 2.5rem;
+    }
+    @include media(">=4k") {
+      font-size: 6rem;
     }
     .anim_text_wrapper {
       overflow: hidden;
@@ -52,6 +59,9 @@
       font-size: 1.2rem;
       margin-top: -5px;
     }
+    @include media(">=4k") {
+      font-size: 2.5rem;
+    }
   }
 
   .cards_holder {
@@ -75,9 +85,12 @@
       justify-content: center;
       margin: 1rem;
       padding: 1rem;
-      height: 200px;
+      height: 350px;
       transition: all 0.2s ease-in-out;
       border-radius: 10px;
+      @include media(">=4k") {
+        height: 500px;
+      }
 
       &:hover {
         transform: scale(1.1) !important;
@@ -86,16 +99,25 @@
       h1 {
         font-size: 1.2rem;
         font-weight: 500;
+        @include media(">=4k") {
+          font-size: 2.5rem;
+        }
       }
       p {
         font-family: "Open Sans";
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: 500;
         opacity: 0.6;
+        @include media(">=4k") {
+          font-size: 2rem;
+        }
       }
       .icon {
         font-size: 3rem;
         margin-bottom: 20px;
+        @include media(">=4k") {
+          font-size: 4rem;
+        }
       }
     }
     .card_one {

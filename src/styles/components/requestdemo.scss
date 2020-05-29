@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120vh;
+  height: 110vh;
   width: 70vw;
   @include media("<phone") {
     top: 0vh;
@@ -21,6 +21,10 @@
     height: auto;
     top: 0vh;
     margin-bottom: 2vh;
+  }
+  @include media(">=4k") {
+    height: 80vh;
+    top: 0vh;
   }
 
   form {
@@ -54,6 +58,10 @@
         @include media(">=phone", "<tablet") {
           margin: 0rem;
         }
+        @include media(">=4k") {
+          padding: 2.5rem;
+          font-size: 1.8rem;
+        }
       }
       .error {
         color: red;
@@ -69,18 +77,9 @@
       width: 200px;
       padding: 1.5rem;
       border: 0px;
-      background: #fc466b; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      font-weight: 600;
+      font-size: 1.2rem;
       color: $white;
       transition: all 0.2s ease-in-out;
       @include media("<phone") {
@@ -88,6 +87,10 @@
       }
       @include media(">=phone", "<tablet") {
         margin: 1rem;
+      }
+      @include media(">=4k") {
+        padding: 2.5rem;
+        font-size: 1.8rem;
       }
       &:hover {
         transform: scale(1.1);

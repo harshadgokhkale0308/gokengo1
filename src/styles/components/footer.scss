@@ -36,6 +36,9 @@
       @include media(">=phone", "<tablet") {
         font-size: 2rem;
       }
+      @include media(">=4k") {
+        font-size: 7rem;
+      }
       .anim_text_wrapper {
         overflow: hidden;
       }
@@ -56,6 +59,9 @@
         margin-top: 0rem;
         width: 90%;
       }
+      @include media(">=4k") {
+        font-size: 2.5rem;
+      }
     }
   }
 
@@ -75,6 +81,9 @@
       font-size: 1.5rem;
       overflow: hidden;
       margin: 1rem;
+      @include media(">=4k") {
+        font-size: 2rem;
+      }
     }
     input {
       background: #101010;
@@ -85,23 +94,19 @@
       opacity: 0.9;
       font-family: "Open Sans";
       opacity: 1;
+      @include media(">=4k") {
+        width: 600px;
+        font-size: 2rem;
+      }
     }
     .submitBtn {
       width: 150px;
       padding: 1rem;
       border: 0px;
       background: #fc466b; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      font-weight: 600;
+      font-size: 1rem;
       color: $white;
       opacity: 1;
       transition: all 0.2s ease-in-out;
@@ -128,12 +133,24 @@
       font-weight: 700;
       align-self: flex-start;
       overflow: hidden;
+      @include media(">=4k") {
+        font-size: 4rem;
+      }
     }
     h1 {
       font-size: 1rem;
       font-weight: 400;
       font-family: "Open Sans";
       opacity: 0.5;
+      @include media("<phone") {
+        font-size: 0.8rem;
+      }
+      @include media(">=phone", "<tablet") {
+        font-size: 0.8rem;
+      }
+      @include media(">=4k") {
+        font-size: 2rem;
+      }
       .anim_text_wrapper {
         overflow: hidden;
       }
@@ -161,6 +178,9 @@
           color: white;
           font-size: 1.2rem;
           cursor: pointer;
+          @include media(">=4k") {
+            font-size: 2rem;
+          }
         }
         &:hover {
           transform: scale(1.1) !important;

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
+import scrollTo from "gatsby-plugin-smoothscroll"
 import mockup from "../assets/mock.mp4"
 
 const Summary = () => {
@@ -43,7 +44,9 @@ const Summary = () => {
             our personal lives. Why not use technology to empower us on the
             factory floor.
           </p>
-          <button className="learn_how_btn">Learn How</button>
+          <button onClick={() => scrollTo("#demo")} className="learn_how_btn">
+            Learn How
+          </button>
         </div>
         <div className="summary_video_wrapper">
           <video autoPlay loop muted>

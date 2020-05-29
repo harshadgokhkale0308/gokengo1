@@ -29,8 +29,8 @@
 
   .logo {
     transition: all 0.1s ease-in-out;
-    height: 2rem;
-    width: 2rem;
+    height: 20px;
+    width: 20px;
 
     @include media("<=phone") {
       height: 2rem;
@@ -85,22 +85,13 @@
       }
     }
     button {
-      background: #fc466b; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
       border: 0px;
       padding: 0.8rem;
       margin: 1rem;
       color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
       transition: transform 0.2s ease-in-out;
       @include media("<phone") {
         padding: 0.4rem;

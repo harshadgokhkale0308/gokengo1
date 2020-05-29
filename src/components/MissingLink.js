@@ -17,13 +17,7 @@ const MissingLink = () => {
 
   useEffect(() => {
     if (inView) {
-      tl.staggerFrom(
-        ".text_inner",
-        0.5,
-        { y: 100, ease: Power3.easeOut },
-        0.2,
-        0.2
-      )
+      tl.staggerFrom(".text_inner", 0.5, { y: 100, ease: Power3.easeOut }, 0.2)
         .from(".sub_heading", 0.6, { opacity: 0, y: 10, ease: Power3.easeOut })
         .staggerFrom(
           ".card",

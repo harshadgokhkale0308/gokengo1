@@ -15,26 +15,27 @@
 
     h1 {
       color: white;
+      @include media(">=4k") {
+        font-size: 4rem;
+      }
     }
     form {
       input {
         border: 0px;
         padding: 1rem;
+        @include media(">=4k") {
+          font-size: 2rem;
+          padding: 2rem;
+        }
       }
       .submitBtn {
-        background: -webkit-linear-gradient(
-          to right,
-          #3f5efb,
-          #fc466b
-        ); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(
-          to right,
-          #3f5efb,
-          #fc466b
-        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: black;
 
         color: white;
         width: 150px;
+        @include media(">=4k") {
+          width: 300px;
+        }
       }
     }
   }

@@ -1,9 +1,9 @@
 .impact_wrapper {
   position: relative;
-  top: -10vh;
+  top: 5vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  height: 120vh;
+  height: 100vh;
   @include media("<phone") {
     display: flex;
     flex-direction: column;
@@ -22,6 +22,9 @@
     flex-direction: column;
     align-items: center;
     height: 200vh;
+  }
+  @include media(">=4k") {
+    top: 0vh;
   }
   .impact_content {
     grid-column: 1 / span 2;
@@ -44,13 +47,16 @@
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       @include media("<phone") {
         font-size: 2rem;
       }
 
       @include media(">=phone", "<tablet") {
         font-size: 2rem;
+      }
+      @include media(">=4k") {
+        font-size: 5rem;
       }
       .wrapper_anim_text {
         overflow: hidden;
@@ -60,20 +66,27 @@
       font-size: 1rem;
       font-family: "Open Sans";
       width: 90%;
-      margin-top: -2rem;
+      margin-top: -3rem;
       @include media("<phone") {
         font-size: 0.7rem;
         margin-top: 0rem;
-        width: 70%;
+        width: 80%;
       }
 
       @include media(">=phone", "<tablet") {
         font-size: 1rem;
         margin-top: 0rem;
-        width: 60%;
+        width: 80%;
       }
-      @include media(">=desktop", "<mddesktop") {
+      @include media(">=tablet", "<desktop") {
         margin-top: 0rem;
+      }
+      @include media("<=mddesktop") {
+        margin-top: 0rem;
+      }
+      @include media(">=4k") {
+        margin-top: 0;
+        font-size: 2rem;
       }
     }
     .money_text {
@@ -92,27 +105,20 @@
       @include media(">=desktop", "<mddesktop") {
         font-size: 3rem;
       }
-      @include media(">mddesktop", "<=lgdesktop") {
+      @include media(">=4k") {
         font-size: 6rem;
       }
       span {
         font-size: 1rem;
         font-weight: 500;
+        @include media(">=4k") {
+          font-size: 2rem;
+        }
       }
     }
     .requestDemoBtn {
-      background: #fc466b; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #3f5efb,
-        #fc466b
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+      background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+      font-weight: 600;
       position: relative;
       top: 2rem;
       border: 0px;
@@ -121,6 +127,10 @@
       padding: 1rem;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
+      @include media(">=4k") {
+        font-size: 2rem;
+        padding: 2rem;
+      }
       &:hover {
         transform: scale(1.1) !important;
       }
@@ -152,11 +162,14 @@
       justify-content: center;
       height: 60%;
       width: 80%;
-      padding: 1rem;
+      padding: 1.2rem;
       display: flex;
       flex-direction: column;
       transition: all 0.2s ease-in;
       border-radius: 20px;
+      -webkit-box-shadow: 0px 0px 53px -33px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 53px -33px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 53px -33px rgba(0, 0, 0, 0.75);
       @include media("<phone") {
         margin: 1rem;
       }
@@ -164,20 +177,13 @@
       @include media(">=phone", "<tablet") {
         margin: 1rem;
       }
+      @include media(">=4k") {
+        font-size: 2rem;
+      }
       &:hover {
         transform: scale(1.1) !important;
         color: white;
-        background: #fc466b; /* fallback for old browsers */
-        background: -webkit-linear-gradient(
-          to right,
-          #3f5efb,
-          #fc466b
-        ); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(
-          to right,
-          #3f5efb,
-          #fc466b
-        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
       }
       .icon {
         font-size: 3rem;
@@ -185,6 +191,9 @@
       span {
         font-weight: 800;
         font-size: 1.2rem;
+        @include media(">=4k") {
+          font-size: 2.5rem;
+        }
       }
     }
   }

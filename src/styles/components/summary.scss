@@ -1,7 +1,6 @@
 .summary_wrapper {
   position: relative;
-  top: 10vh;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -14,7 +13,7 @@
     justify-content: center;
   }
 
-  @include media(">=phone", "<=tablet") {
+  @include media(">=phone", "<tablet") {
     top: 5vh;
     height: 100vh;
     flex-direction: column;
@@ -22,21 +21,24 @@
   }
 
   @include media(">=tablet", "<=desktop") {
-    top: 0vh;
+    top: -20vh;
     height: 190vh;
     flex-direction: column-reverse;
+  }
+
+  @include media(">=4k") {
+    height: 100vh;
   }
 
   .heading {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     .head_text {
       font-weight: 600;
       font-family: "Open Sans";
       text-align: left;
       width: 600px;
-      font-size: 1.5rem;
+      font-size: 2.2rem;
       opacity: 1;
       color: $black;
       @include media("<phone") {
@@ -55,8 +57,13 @@
         width: 600px;
         text-align: center;
       }
+
+      @include media(">=4k") {
+        font-size: 3rem;
+      }
     }
     p {
+      font-size: 1.5rem;
       font-family: "Open Sans";
       text-align: left;
       @include media("<phone") {
@@ -75,6 +82,9 @@
         width: 600px;
         text-align: center;
       }
+      @include media(">=4k") {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -84,7 +94,7 @@
     align-self: center;
     justify-self: center;
     video {
-      width: 40vw;
+      width: 50vw;
 
       @include media("<phone") {
         width: 100vw;
@@ -100,18 +110,9 @@
   }
 
   .learn_how_btn {
-    background: #fc466b; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #3f5efb,
-      #fc466b
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #3f5efb,
-      #fc466b
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    font-weight: 600;
+    font-size: 1.2rem;
     border: 0px;
     width: 50%;
     padding: 1.5rem;
@@ -129,6 +130,9 @@
     }
     @include media(">=tablet", "<=desktop") {
       align-self: center;
+    }
+    @include media(">=4k") {
+      font-size: 2rem;
     }
     &:hover {
       transform: scale(1.1);

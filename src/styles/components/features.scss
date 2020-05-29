@@ -1,5 +1,6 @@
 .grid_wrapper {
   position: relative;
+  top: 5vh;
   height: auto;
   @include media("<phone") {
     top: -2vh;
@@ -14,16 +15,13 @@
     top: 0vh;
     height: auto;
   }
-  @include media(">=desktop", "<mddesktop") {
-    height: 150vh;
-  }
 }
 .features_wrapper {
   position: relative;
   flex-direction: column;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   align-self: flex-start;
   width: 100vw;
   @include media("<phone") {
@@ -37,18 +35,25 @@
     display: flex;
   }
   .feature_content {
-    padding: 2rem;
+    padding: 1rem;
+    margin: 1rem;
     grid-column: 1 / span 2;
     h1 {
       font-size: 3rem;
       @include media(">mddesktop", "<=lgdesktop") {
         font-size: 3.5rem;
       }
+      @include media(">=4k") {
+        font-size: 5rem;
+      }
     }
     p {
       font-family: "Open Sans";
       @include media(">mddesktop", "<=lgdesktop") {
         font-size: 2rem;
+      }
+      @include media(">=4k") {
+        font-size: 1.5rem;
       }
     }
   }
@@ -67,6 +72,13 @@
     text-align: center;
     color: white;
     background-color: whitesmoke;
+    @include media(">=tablet", "<=desktop") {
+      height: 300px;
+    }
+    @include media(">=4k") {
+      height: 520px;
+      margin: 1rem;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -138,11 +150,14 @@
     @include media(">=desktop", "<mddesktop") {
       font-size: 30px;
     }
+    @include media(">=4k") {
+      font-size: 3.5rem;
+    }
   }
 
   .copy {
     font-family: "Open Sans";
-    font-size: 0.8rem;
+    font-size: 15px;
     font-style: italic;
     line-height: 1.35;
     @include media("<phone") {
@@ -155,37 +170,8 @@
     @include media(">=tablet", "<=desktop") {
       font-size: 18px;
     }
-    @include media(">=desktop", "<mddesktop") {
-      font-size: 12px;
-    }
-  }
-
-  .btn {
-    cursor: pointer;
-    margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.65rem;
-    font-weight: bold;
-    letter-spacing: 0.025rem;
-    text-transform: uppercase;
-    color: white;
-    background: #fc466b; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #3f5efb,
-      #fc466b
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #3f5efb,
-      #fc466b
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    border: none;
-
-    &:focus {
-      outline: 1px dashed white;
-      outline-offset: 3px;
+    @include media(">=4k") {
+      font-size: 30px;
     }
   }
 
@@ -236,8 +222,6 @@
   }
 
   .one {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     grid-column: 3 / span 4;
     display: flex;
     flex-direction: column;
@@ -253,27 +237,12 @@
 
   .two {
     grid-column-start: 1;
-    grid-column-end: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    .card_two {
-      background-image: url(https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .three {
-    grid-column-start: 2;
     grid-column-end: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .card_three {
+    .card_two {
       background-image: url(https://img.techpowerup.org/200527/optimized-measure-min.jpg);
       background-size: cover;
       background-repeat: no-repeat;
@@ -281,15 +250,30 @@
     }
   }
 
-  .four {
+  .three {
     grid-column-start: 3;
     grid-column-end: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .card_three {
+      background-image: url(https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .four {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     .card_four {
-      background-image: url(https://img.techpowerup.org/200527/delegate.jpg);
+      background-image: url(https://images.pexels.com/photos/3912956/pexels-photo-3912956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -297,20 +281,28 @@
   }
 
   .five {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .six {
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .card_five {
-      background-image: url(https://images.pexels.com/photos/3912956/pexels-photo-3912956.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    .card_six {
+      background-image: url(https://img.techpowerup.org/200527/delegate.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
   }
-  .six {
+  .seven {
     grid-column-start: 3;
     grid-column-end: 5;
     display: flex;
