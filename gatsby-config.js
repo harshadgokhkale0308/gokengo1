@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Goken Go`,
+    description: `GokenGo is a 24 hour operations monitoring platform that enables huge savings powered by the built-in shift handover process.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -35,6 +35,23 @@ module.exports = {
         rule: {
           include: /assets/, // See below to configure properly
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us10.list-manage.com/subscribe/post?u=a591366e1ca4df6862d09d5e0&amp;id=45eee3c3fd", // string; add your MC list endpoint here; see instructions below
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

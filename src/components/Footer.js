@@ -4,11 +4,16 @@ import { Link } from "gatsby"
 import { TimelineLite, Power3 } from "gsap"
 import { useInView } from "react-intersection-observer"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Footer = () => {
   const { register, handleSubmit } = useForm()
   const onSubmitFooter = data => {
-    console.log(data)
+    console.log(data.emailFromUpdates)
+    const email = data.emailFromUpdates
+    addToMailchimp(email)
+      .then(data => console.log(data))
+      .catch(e => console.log(e))
   }
 
   const [footerref, inView] = useInView({
@@ -139,6 +144,9 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="copyright">
+        copyright © 2020 GokenGo , All rights reserved
       </div>
     </div>
   )

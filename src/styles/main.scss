@@ -32,6 +32,7 @@ html {
   background: black;
   overflow-x: hidden;
   transition: all 0.4s ease-in-out;
+  scroll-behavior: smooth;
 
   .container {
     width: 100vw;
