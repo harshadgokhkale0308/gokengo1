@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Goken Go`,
     description: `GokenGo is a 24 hour operations monitoring platform that enables huge savings powered by the built-in shift handover process.`,
-    author: `@gatsbyjs`,
+    author: `GokenGo.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -51,7 +51,7 @@ module.exports = {
         // Setting a color is optional.
         color: `tomato`,
         // Disable the loading spinner.
-        showSpinner: false,
+        showSpinner: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
