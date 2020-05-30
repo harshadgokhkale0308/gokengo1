@@ -7,13 +7,11 @@ const RequestDemo = () => {
   const { register, handleSubmit, errors } = useForm()
 
   const onSubmit = data => {
-    console.log(data)
     addToMailchimp(data.email, data)
       .then(res => {
         setSubmitted(true)
-        console.log(res)
       })
-      .catch(e => console.log(e))
+      .catch(e => console.error(e))
   }
 
   console.log(errors)

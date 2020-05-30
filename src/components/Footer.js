@@ -15,7 +15,7 @@ const Footer = () => {
     const email = data.emailFromUpdates
     addToMailchimp(email)
       .then(data => setSubmitted(true))
-      .catch(e => console.log(e))
+      .catch(e => console.error(e))
   }
 
   const [footerref, inView] = useInView({

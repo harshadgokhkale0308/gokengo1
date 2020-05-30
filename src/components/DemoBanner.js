@@ -9,7 +9,7 @@ const DemoBanner = () => {
     const email = data.emailFromBanner
     addToMailchimp(email)
       .then(data => setSubmitted(true))
-      .catch(e => console.log(e))
+      .catch(e => console.error(e))
   }
 
   return (
