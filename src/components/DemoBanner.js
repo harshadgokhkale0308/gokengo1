@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useForm } from "react-hook-form"
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import Fade from "react-reveal/Fade"
 
 const DemoBanner = () => {
   const [submitted, setSubmitted] = useState(false)
@@ -16,7 +17,9 @@ const DemoBanner = () => {
     <div className="container">
       <div className="demo_banner_wrapper">
         <div className="demo_banner">
-          <h1>Request a Demo</h1>
+          <Fade bottom cascade>
+            <h1>Request a Demo</h1>
+          </Fade>
           {!submitted ? (
             <form onSubmit={handleSubmit(onSubmitAbout)}>
               <input

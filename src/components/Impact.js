@@ -1,7 +1,6 @@
-import React, { useEffect } from "react"
-import { TimelineLite, Power3 } from "gsap"
-import { useInView } from "react-intersection-observer"
+import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
+import Fade from "react-reveal/Fade"
 
 // Icons
 
@@ -10,66 +9,32 @@ import { TiGroupOutline } from "react-icons/ti"
 import { DiGoogleAnalytics } from "react-icons/di"
 
 const Impact = () => {
-  const [impactref, inView] = useInView({
-    threshold: 0,
-    triggerOnce: true,
-  })
-  let tl = new TimelineLite()
-  useEffect(() => {
-    if (inView) {
-      tl.staggerFrom(".text_inner", 0.8, { y: 100, ease: Power3.easeOut }, 0.3)
-        .from(
-          ".impact_content p",
-          0.2,
-          {
-            opacity: 0,
-            y: 10,
-            ease: Power3.easeOut,
-          },
-          "-=0.6"
-        )
-        .from(".money_text", 0.4, { opacity: 0, y: 10, ease: Power3.easeOut })
-        .staggerFrom(".impact_node", 0.4, {
-          opacity: 0,
-          y: 10,
-          ease: Power3.easeOut,
-        })
-        .from(".requestDemoBtn", 0.4, {
-          opacity: 0,
-          y: 10,
-          ease: Power3.easeOut,
-        })
-    }
-  }, [inView])
-
   return (
     <div className="container bg_white">
-      <div className="impact_wrapper" ref={impactref}>
+      <div className="impact_wrapper">
         <div className="impact_content">
-          <h1>
-            <div className="wrapper_anim_text">
-              <div className="text_inner">Impact of</div>
-            </div>{" "}
-            <div className="wrapper_anim_text">
-              <div className="text_inner">Workflow</div>
-            </div>{" "}
-            <div className="wrapper_anim_text">
-              <div className="text_inner">Optimisation</div>
-            </div>{" "}
-          </h1>
+          <div className="heading_text">
+            <Fade bottom cascade>
+              <h1>Impact of</h1>
+              <h1>Workflow</h1>
+              <h1>Optimisation</h1>
+            </Fade>
+          </div>
           <p>
             a simple tool to aggregate shift-wise information helped one of our
             client create huge economic impact
           </p>
           <div className="money_text">
             $250,000
-            <span>saved annually</span>
+            <Fade bottom cascade>
+              <span>saved annually</span>
+            </Fade>
           </div>
+
           <button onClick={() => scrollTo("#demo")} className="requestDemoBtn">
             Request a Demo
           </button>
         </div>
-
         <div className="impact_nodes">
           <div className="impact_node">
             <AiOutlineFieldTime className="icon"></AiOutlineFieldTime>

@@ -22,6 +22,7 @@
   }
   .heading {
     font-size: 3.8rem;
+    overflow: hidden;
     @include media("<phone") {
       font-size: 1.2rem;
     }
@@ -34,9 +35,6 @@
     }
     @include media(">=4k") {
       font-size: 6rem;
-    }
-    .anim_text_wrapper {
-      overflow: hidden;
     }
   }
   .sub_heading {
@@ -86,14 +84,9 @@
       margin: 1rem;
       padding: 1rem;
       height: 350px;
-      transition: all 0.2s ease-in-out;
       border-radius: 10px;
       @include media(">=4k") {
         height: 500px;
-      }
-
-      &:hover {
-        transform: scale(1.1) !important;
       }
 
       h1 {

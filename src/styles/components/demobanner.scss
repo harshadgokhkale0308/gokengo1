@@ -15,6 +15,7 @@
 
     h1 {
       color: white;
+      overflow: hidden;
       @include media(">=4k") {
         font-size: 4rem;
       }

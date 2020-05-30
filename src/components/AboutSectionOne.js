@@ -1,38 +1,15 @@
-import React, { useEffect } from "react"
-import { TimelineLite, Power3 } from "gsap"
-import { useInView } from "react-intersection-observer"
+import React from "react"
+import Fade from "react-reveal/Fade"
 
 const AboutSectionOne = () => {
-  const [aboutSectionOneRef, inView] = useInView({
-    threshold: 0,
-    triggerOnce: true,
-  })
-  let tl = new TimelineLite()
-
-  useEffect(() => {
-    if (inView) {
-      tl.from(".section_one_inner_text", 1, {
-        y: 100,
-        ease: Power3.easeOut,
-      }).from(
-        ".about_section_one p",
-        0.6,
-        {
-          opacity: 0,
-          y: 20,
-          ease: Power3.easeOut,
-        },
-        "-=0.6"
-      )
-    }
-  }, [inView, tl])
-
   return (
-    <div className="container" ref={aboutSectionOneRef}>
+    <div className="container">
       <div className="about_section_one_wrapper">
         <div className="about_section_one">
           <h1>
-            <div className="section_one_inner_text">What We Do.</div>
+            <Fade bottom cascade>
+              <div className="section_one_inner_text">What We Do.</div>
+            </Fade>
           </h1>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting

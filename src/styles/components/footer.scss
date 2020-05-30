@@ -30,6 +30,7 @@
     }
     h1 {
       font-size: 5rem;
+      overflow: hidden;
       @include media("<phone") {
         font-size: 2rem;
       }
@@ -38,9 +39,6 @@
       }
       @include media(">=4k") {
         font-size: 7rem;
-      }
-      .anim_text_wrapper {
-        overflow: hidden;
       }
     }
     p {
