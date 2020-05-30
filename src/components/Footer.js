@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useForm } from "react-hook-form"
 import { Link } from "gatsby"
 import { TimelineLite, Power3 } from "gsap"
@@ -7,12 +7,14 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Footer = () => {
+  const [submitted, setSubmitted] = useState(false)
   const { register, handleSubmit } = useForm()
+
   const onSubmitFooter = data => {
     console.log(data.emailFromUpdates)
     const email = data.emailFromUpdates
     addToMailchimp(email)
-      .then(data => console.log(data))
+      .then(data => setSubmitted(true))
       .catch(e => console.log(e))
   }
 
@@ -53,7 +55,7 @@ const Footer = () => {
           0.5
         )
     }
-  }, [inView, tl])
+  }, [inView])
   return (
     <div className="container bg_black">
       <div className="footer_wrapper">
@@ -69,18 +71,24 @@ const Footer = () => {
           </p>
         </div>
         <div className="signup">
-          <div className="signup_heading">
-            <div className="inner_text">Sign up for updates</div>
-          </div>
-          <form onSubmit={handleSubmit(onSubmitFooter)}>
-            <input
-              type="text"
-              placeholder="enter your email"
-              name="emailFromUpdates"
-              ref={register({ required: true, pattern: /^\S+@\S+$/i })}
-            />
-            <input className="submitBtn" type="submit" />
-          </form>
+          {!submitted ? (
+            <div>
+              <div className="signup_heading">
+                <div className="inner_text">Sign up for updates</div>
+              </div>
+              <form onSubmit={handleSubmit(onSubmitFooter)}>
+                <input
+                  type="text"
+                  placeholder="enter your email"
+                  name="emailFromUpdates"
+                  ref={register({ required: true, pattern: /^\S+@\S+$/i })}
+                />
+                <input className="submitBtn" type="submit" />
+              </form>
+            </div>
+          ) : (
+            <h1>Thank you for your submission!!</h1>
+          )}
         </div>
         <div className="offices_section">
           <div className="offices_heading">

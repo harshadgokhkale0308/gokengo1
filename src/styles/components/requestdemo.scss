@@ -99,3 +99,33 @@
     }
   }
 }
+
+.form_submitted {
+  position: relative;
+  top: -10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 70vw;
+  @include media("<phone") {
+    top: 0vh;
+    height: auto;
+  }
+
+  @include media(">=phone", "<tablet") {
+    top: 0vh;
+    height: auto;
+  }
+
+  @include media(">=tablet", "<=desktop") {
+    height: auto;
+    top: 0vh;
+    margin-bottom: 2vh;
+  }
+  @include media(">=4k") {
+    height: 80vh;
+    top: 0vh;
+  }
+}

@@ -14,7 +14,13 @@ import RequestDemo from "../components/RequestDemo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO
+      title="Home"
+      description="The ultimate goal of any operations system – Manufacturing | Retail |
+          Healthcare – is to be intelligent enough to discover knowledge, make
+          decisions and deliver actions independently. GokenGO platform provides
+          a framework to build such an intelligent system"
+    />
     <Header></Header>
     <HeaderVideo></HeaderVideo>
     <Summary></Summary>
