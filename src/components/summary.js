@@ -9,10 +9,10 @@ const Summary = () => {
       <div className="summary_wrapper">
         <div className="heading">
           <Fade bottom cascade>
-            <p className="head_text">
+            <h1 className="head_text">
               GokenGo is a 24 hour operations monitoring platform that enables
               huge savings powered by the built-in shift handover process.
-            </p>
+            </h1>
           </Fade>
           <Fade bottom>
             <p>

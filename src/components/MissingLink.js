@@ -17,12 +17,12 @@ const MissingLink = () => {
           </Fade>
         </h1>
 
-        <p className="sub_heading">
-          <Fade bottom cascade>
+        <Fade bottom cascade>
+          <p className="sub_heading">
             We will not just provide the tools to get the job done, we will help
             you with the process and the results are there for you to see !
-          </Fade>
-        </p>
+          </p>
+        </Fade>
         <Fade bottom cascade>
           <div className="cards_holder">
             <div className="final_card card_one">

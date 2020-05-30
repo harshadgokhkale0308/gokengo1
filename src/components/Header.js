@@ -27,22 +27,18 @@ const Header = () => {
             className="stomp_preloader"
             ref={el => (preloaderContainer = el)}
           ></div>
-          <Fade left>
-            <div className="video_wrapper">
-              <video loop autoPlay muted>
-                <source src={MainVideo} type="video/mp4" />
-              </video>
-            </div>
-          </Fade>
+          <div className="video_wrapper">
+            <video loop autoPlay muted>
+              <source src={MainVideo} type="video/mp4" />
+            </video>
+          </div>
         </div>
-        <Fade bottom cascade>
-          <p>
-            The ultimate goal of any operations system – Manufacturing | Retail
-            | Healthcare – is to be intelligent enough to discover knowledge,
-            make decisions and deliver actions independently. GokenGO platform
-            provides a framework to build such an intelligent system
-          </p>
-        </Fade>
+        <p>
+          The ultimate goal of any operations system – Manufacturing | Retail |
+          Healthcare – is to be intelligent enough to discover knowledge, make
+          decisions and deliver actions independently. GokenGO platform provides
+          a framework to build such an intelligent system
+        </p>
         <form>
           <input
             type="text"
