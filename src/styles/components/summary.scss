@@ -120,6 +120,7 @@
     padding-right: 2rem;
     color: white;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 
     @include media("<phone") {
       width: 100%;

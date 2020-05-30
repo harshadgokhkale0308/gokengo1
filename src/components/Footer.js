@@ -146,7 +146,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        copyright © 2020 GokenGo , All rights reserved
+        copyright © 2020 GokenGo , All rights reserved.
       </div>
     </div>
   )

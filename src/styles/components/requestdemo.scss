@@ -82,6 +82,7 @@
       font-size: 1.2rem;
       color: $white;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
       @include media("<phone") {
         margin: 1rem;
       }
