@@ -7,18 +7,11 @@
 
 import React, { useEffect } from "react"
 import "../styles/main.scss"
-import gsap from "gsap"
-import CSSPlugin from "gsap/CSSPlugin"
-
 // Components
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    gsap.registerPlugin(CSSPlugin)
-  })
-
   return (
     <div>
       <Navbar></Navbar>
