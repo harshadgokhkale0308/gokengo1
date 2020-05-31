@@ -34,7 +34,7 @@ const Header = () => {
           </div>
         </div>
         <p>
-          The ultimate goal of any operations system – Manufacturing | Retail |
+          The ultimate goal of any operations system – Manufacturing to
           Healthcare – is to be intelligent enough to discover knowledge, make
           decisions and deliver actions independently. GokenGO platform provides
           a framework to build such an intelligent system

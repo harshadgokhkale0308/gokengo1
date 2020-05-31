@@ -75,13 +75,11 @@ const Features = () => {
             <Fade bottom cascade>
               <div className="feature_content">
                 <h1>
-                  Our platform brings <br></br>it all together.
+                  Features that ensure <br></br>Connectivity and Continuity.
                 </h1>
                 <p>
-                  GokenGo platform can enable manufacturing factory floor,
-                  process plants, Oil & Gas sites and hospitals ICUs to go
-                  digital. It captures the essence of continuity in daily
-                  operations.
+                  Our platform provides special configurations and reports that
+                  help you to map your factory process
                 </p>
               </div>
             </Fade>

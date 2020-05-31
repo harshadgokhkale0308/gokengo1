@@ -21,14 +21,12 @@ const Summary = () => {
               factory floor.
             </p>
           </Fade>
-          <Fade bottom>
-            <button
-              onClick={() => scrollTo("#features")}
-              className="learn_how_btn"
-            >
-              Learn How
-            </button>
-          </Fade>
+          <button
+            onClick={() => scrollTo("#features")}
+            className="learn_how_btn"
+          >
+            Learn How
+          </button>
         </div>
         <Fade bottom>
           <div className="summary_video_wrapper">

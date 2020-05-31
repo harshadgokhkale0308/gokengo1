@@ -8,7 +8,7 @@
 @import "./components/header.scss";
 @import "./components/summary.scss";
 @import "./components/features.scss";
-@import "./components//impact.scss";
+@import "./components/impact.scss";
 @import "./components/missinglink.scss";
 @import "./components/requestdemo.scss";
 @import "./components/footer.scss";
@@ -58,4 +58,16 @@ html {
 }
 .bg_transparent {
   background: transparent !important;
+}
+
+.loading {
+  display: flex;
+  background: black;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 4rem;
 }

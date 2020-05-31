@@ -46,6 +46,12 @@
       @include media(">=4k") {
         font-size: 5rem;
       }
+      @include media("<phone") {
+        font-size: 2rem;
+      }
+      @include media(">=phone", "<tablet") {
+        font-size: 2rem;
+      }
     }
     p {
       font-family: "Open Sans";

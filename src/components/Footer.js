@@ -62,7 +62,7 @@ const Footer = () => {
           <h1>
             <div className="office_heading_text">India</div>
             <div className="anim_text_wrapper">
-              <Fade bottom cascade>
+              <Fade bottom>
                 <div className="office_text">
                   3rd Floor, Alacrity India Innovation Center, Pune, Maharashtra
                   411057, IN
@@ -73,7 +73,7 @@ const Footer = () => {
           <h1>
             <div className="office_heading_text">United States</div>
             <div className="anim_text_wrapper">
-              <Fade bottom cascade>
+              <Fade bottom>
                 <div className="office_text">
                   5100 Parkcenter Avenue Dublin, Ohio 43017 USA
                 </div>

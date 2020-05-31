@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import SEO from "../components/seo"
 
 // Components
@@ -8,17 +8,29 @@ import AboutSectionOne from "../components/AboutSectionOne"
 import DemoBanner from "../components/DemoBanner"
 import Footer from "../components/Footer"
 
-const about = () => {
+const About = () => {
+  const [hasMounted, setHasMounted] = useState(false)
+
+  useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
   return (
     <>
-      <SEO title="about" />
-      <NavbarWhite></NavbarWhite>
-      <AboutHeader></AboutHeader>
-      <AboutSectionOne></AboutSectionOne>
-      <DemoBanner></DemoBanner>
-      <Footer></Footer>
+      {!hasMounted ? (
+        <div className="loading">GokenGo.</div>
+      ) : (
+        <>
+          <SEO title="about" />
+          <NavbarWhite></NavbarWhite>
+          <AboutHeader></AboutHeader>
+          <AboutSectionOne></AboutSectionOne>
+          <DemoBanner></DemoBanner>
+          <Footer></Footer>
+        </>
+      )}
     </>
   )
 }
 
-export default about
+export default About

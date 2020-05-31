@@ -74,7 +74,9 @@
       top: 30vh;
     }
     @include media(">=tablet", "<=desktop") {
+      font-size: 18px;
       top: 35vh;
+      opacity: 1;
     }
   }
   form {
