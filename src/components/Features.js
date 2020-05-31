@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade"
 
 const Features = () => {
   return (
-    <div className="container bg_white">
+    <div className="container bg_white" id="features">
       <div className="grid_wrapper">
         <div className="features_wrapper">
           <Fade bottom cascade>

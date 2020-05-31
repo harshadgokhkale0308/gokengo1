@@ -17,7 +17,7 @@ const MissingLink = () => {
           </Fade>
         </h1>
 
-        <Fade bottom cascade>
+        <Fade bottom>
           <p className="sub_heading">
             We will not just provide the tools to get the job done, we will help
             you with the process and the results are there for you to see !

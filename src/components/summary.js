@@ -8,7 +8,7 @@ const Summary = () => {
     <div className="container bg_white">
       <div className="summary_wrapper">
         <div className="heading">
-          <Fade bottom cascade>
+          <Fade bottom>
             <h1 className="head_text">
               GokenGo is a 24 hour operations monitoring platform that enables
               huge savings powered by the built-in shift handover process.
@@ -22,7 +22,10 @@ const Summary = () => {
             </p>
           </Fade>
           <Fade bottom>
-            <button onClick={() => scrollTo("#demo")} className="learn_how_btn">
+            <button
+              onClick={() => scrollTo("#features")}
+              className="learn_how_btn"
+            >
               Learn How
             </button>
           </Fade>
