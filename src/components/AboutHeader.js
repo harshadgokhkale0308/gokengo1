@@ -12,10 +12,17 @@ const AboutHeader = () => {
             </Fade>
           </h1>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Until 2019, several industries regularly used data analytics to
+            publish static reports and interactive dashboards. Covid-19 pandemic
+            in 2020 changed how the world does business and demanded process
+            changes. Post Covid-19 industry will be characterized by remote
+            work, staggered workforce, social distancing and traceability of
+            people and material. GokenGO, a 24 hour operations platform was
+            developed during the pandemic to ensure traceability of daily work,
+            issues and people; while mapping your existing plants, lines and
+            departments on our platform. Now you can safely handover your work
+            and review your daily metrics without having to bring the entire
+            team together in your control room.
           </p>
         </div>
         <div className="big_image_wrapper"></div>
