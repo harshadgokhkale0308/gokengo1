@@ -4,16 +4,16 @@ import lottie from "lottie-web"
 import Fade from "react-reveal/Fade"
 
 // Preloading Animation
-import preloadingAnim from "../lottie/preloaderWhite.json"
+import stompAnim from "../lottie/stompWhite.json"
 
 const Header = () => {
-  let preloaderContainer = useRef(null)
+  let stompContainer = useRef(null)
 
   useEffect(() => {
     document.body.style.backgroundColor = "black"
     const anim = lottie.loadAnimation({
-      container: preloaderContainer,
-      animationData: preloadingAnim,
+      container: stompContainer,
+      animationData: stompAnim,
       loop: false,
     })
     anim.setSpeed(2)
@@ -25,7 +25,7 @@ const Header = () => {
         <div className="content_wrapper">
           <div
             className="stomp_preloader"
-            ref={el => (preloaderContainer = el)}
+            ref={el => (stompContainer = el)}
           ></div>
           <div className="video_wrapper">
             <video loop autoPlay muted>

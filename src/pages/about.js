@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import SEO from "../components/seo"
 
 // Components
@@ -19,7 +19,16 @@ const About = () => {
   return (
     <>
       {!hasMounted ? (
-        <div className="loading">GokenGo.</div>
+        <div className="loading">
+          <h1>GokenGo.</h1>
+          <div className="loading_animation">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+        </div>
       ) : (
         <>
           <SEO title="about" />
