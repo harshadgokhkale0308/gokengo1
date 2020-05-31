@@ -7,6 +7,7 @@ import AboutHeader from "../components/AboutHeader"
 import AboutSectionOne from "../components/AboutSectionOne"
 import DemoBanner from "../components/DemoBanner"
 import Footer from "../components/Footer"
+import "../styles/main.scss"
 
 const About = () => {
   const [hasMounted, setHasMounted] = useState(false)
