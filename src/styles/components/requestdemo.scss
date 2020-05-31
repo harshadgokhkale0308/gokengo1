@@ -1,12 +1,12 @@
 .request_demo_wrapper {
   position: relative;
-  top: -10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 110vh;
+  height: auto;
   width: 70vw;
+  margin-bottom: 10vh;
   @include media("<phone") {
     top: 0vh;
     height: auto;
@@ -53,10 +53,10 @@
         opacity: 0.9;
         font-family: "Open Sans";
         @include media("<phone") {
-          margin: 0rem;
+          margin: 5px;
         }
         @include media(">=phone", "<tablet") {
-          margin: 0rem;
+          margin: 5px;
         }
         @include media(">=4k") {
           padding: 2.5rem;

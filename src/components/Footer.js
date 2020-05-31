@@ -27,8 +27,8 @@ const Footer = () => {
             </Fade>
           </h1>
           <p>
-            An operations Management Platform for the Factory Floor. Never miss
-            a beat , stay connected always !
+            An operations management platform for the factory floor. Never miss
+            a beat,<br></br>stay connected always !
           </p>
         </div>
         <div className="signup">
@@ -64,8 +64,8 @@ const Footer = () => {
             <div className="anim_text_wrapper">
               <Fade bottom>
                 <div className="office_text">
-                  3rd Floor, Alacrity India Innovation Center, Pune, Maharashtra
-                  411057, IN
+                  3rd Floor, Alacrity India Innovation Center, Baner, Pune -
+                  411045
                 </div>
               </Fade>
             </div>
@@ -75,7 +75,7 @@ const Footer = () => {
             <div className="anim_text_wrapper">
               <Fade bottom>
                 <div className="office_text">
-                  5100 Parkcenter Avenue Dublin, Ohio 43017 USA
+                  5100 Parkcenter Avenue Dublin, Ohio - 43017
                 </div>
               </Fade>
             </div>
@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <div className="link">
-                  <a className="link" href="#">
+                  <a className="link" href="https://medium.com/gokengo">
                     Blog.
                   </a>
                 </div>
@@ -125,7 +125,8 @@ const Footer = () => {
         </div>
       </div>
       <div className="copyright">
-        copyright © 2020 GokenGo , All rights reserved.
+        copyright © 2020 Goken Technology India Private Limited , All rights
+        reserved.
       </div>
     </div>
   )

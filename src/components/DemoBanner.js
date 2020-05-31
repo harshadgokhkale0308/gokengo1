@@ -14,7 +14,7 @@ const DemoBanner = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container" id="banner">
       <div className="demo_banner_wrapper">
         <div className="demo_banner">
           <Fade bottom cascade>

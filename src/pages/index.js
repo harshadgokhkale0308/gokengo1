@@ -16,6 +16,7 @@ const IndexPage = () => {
   const [hasMounted, setHasMounted] = useState(false)
 
   useEffect(() => {
+    document.body.style.backgroundColor = "black"
     setHasMounted(true)
   }, [])
 

@@ -5,19 +5,29 @@
   color: white;
   position: relative;
   top: 40vh;
-  height: 100vh;
+  height: auto;
   @include media("<phone") {
     height: 130vh;
     display: flex;
   }
 
   @include media(">=phone", "<=tablet") {
-    height: 130vh;
+    height: 120vh;
     display: flex;
   }
   @include media(">=tablet", "<=desktop") {
     display: flex;
     height: 120vh;
+  }
+  // Ipad
+  @media only screen and (device-width: 768px) and (device-height: 1024px) {
+    top: 20vh;
+    height: 60vh;
+  }
+  // Ipda Pro
+  @media only screen and (device-width: 1024px) and (device-height: 1366px) {
+    height: 50vh;
+    top: 20vh;
   }
 
   .content_wrapper {
@@ -44,6 +54,10 @@
       @include media(">=tablet", "<=desktop") {
         height: 700px;
         width: 700px;
+      }
+      @media only screen and (device-width: 1024px) and (device-height: 1366px) {
+        height: 1000px;
+        width: 1000px;
       }
     }
 
@@ -78,6 +92,12 @@
       top: 35vh;
       opacity: 1;
     }
+    @media only screen and (device-width: 768px) and (device-height: 1024px) {
+      top: 15vh;
+    }
+    @media only screen and (device-width: 1024px) and (device-height: 1366px) {
+      top: 15vh;
+    }
   }
   form {
     position: relative;
@@ -99,6 +119,12 @@
     @include media(">=tablet", "<=desktop") {
       top: 35vh;
     }
+    @media only screen and (device-width: 768px) and (device-height: 1024px) {
+      top: 15vh;
+    }
+    @media only screen and (device-width: 1024px) and (device-height: 1366px) {
+      top: 15vh;
+    }
 
     .input {
       background: $input;
@@ -118,9 +144,8 @@
 
 .header_video_wrapper {
   position: relative;
-  top: -10vh;
   z-index: 2;
-  height: 100vh;
+  height: auto;
   video {
     width: 100vw;
   }

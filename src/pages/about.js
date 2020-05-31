@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState } from "react"
 import SEO from "../components/seo"
 
 // Components
@@ -13,6 +13,7 @@ const About = () => {
   const [hasMounted, setHasMounted] = useState(false)
 
   useEffect(() => {
+    document.body.style.backgroundColor = "white"
     setHasMounted(true)
   }, [])
 

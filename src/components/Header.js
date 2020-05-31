@@ -10,7 +10,6 @@ const Header = () => {
   let stompContainer = useRef(null)
 
   useEffect(() => {
-    document.body.style.backgroundColor = "black"
     const anim = lottie.loadAnimation({
       container: stompContainer,
       animationData: stompAnim,

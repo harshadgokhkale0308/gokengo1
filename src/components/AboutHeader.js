@@ -1,11 +1,7 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Fade from "react-reveal/Fade"
 
 const AboutHeader = () => {
-  useEffect(() => {
-    document.body.style.backgroundColor = "white"
-  }, [])
-
   return (
     <div className="container">
       <div className="about_header_wrapper">

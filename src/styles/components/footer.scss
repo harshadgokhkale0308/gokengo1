@@ -1,7 +1,7 @@
 .footer_wrapper {
   position: relative;
   display: grid;
-  height: 100vh;
+  height: auto;
   grid-template-columns: repeat(2, 1fr);
   @include media("<phone") {
     display: flex;
@@ -15,6 +15,12 @@
     flex-direction: column;
     height: auto;
     align-items: center;
+  }
+  @include media(">=desktop") {
+    height: 100vh;
+  }
+  @media only screen and (device-width: 1024px) and (device-height: 1366px) {
+    height: auto;
   }
   .footer_heading {
     display: flex;
@@ -37,7 +43,7 @@
       @include media(">=phone", "<tablet") {
         font-size: 2rem;
       }
-      @include media(">=tablet", "<=desktop") {
+      @include media(">=tablet", "<desktop") {
         font-size: 2rem;
       }
       @include media(">=4k") {

@@ -12,7 +12,7 @@ const MissingLink = () => {
       <div className="missing_link_wrapper">
         <h1 className="heading">
           <Fade bottom cascade>
-            <div className="text_inner">The Missing link in your daily</div>
+            <div className="text_inner">The missing link in your daily</div>
             <div className="text_inner">work management.</div>
           </Fade>
         </h1>

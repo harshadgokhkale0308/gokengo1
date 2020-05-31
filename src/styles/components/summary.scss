@@ -1,11 +1,12 @@
 .summary_wrapper {
   position: relative;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: row;
   width: 90vw;
-
+  top: 5vh;
+  margin-bottom: 5vh;
   @include media("<phone") {
     top: 5vh;
     height: 100vh;
@@ -15,15 +16,18 @@
 
   @include media(">=phone", "<tablet") {
     top: 5vh;
-    height: 100vh;
+    height: auto;
+    margin-bottom: 10vh;
     flex-direction: column;
-    justify-content: center;
   }
 
   @include media(">=tablet", "<=desktop") {
-    top: -20vh;
-    height: 190vh;
+    top: 2vh;
+    height: auto;
     flex-direction: column-reverse;
+  }
+  @media only screen and (device-width: 1920px) and (device-height: 1080px) {
+    margin-top: 0vh;
   }
 
   @include media(">=4k") {
