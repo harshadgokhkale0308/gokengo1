@@ -15,6 +15,9 @@
     top: 0vh;
     height: auto;
   }
+  @media only screen and (device-width: 1440px) and (device-height: 1084px) {
+    margin-bottom: 5vh;
+  }
 }
 .features_wrapper {
   position: relative;
