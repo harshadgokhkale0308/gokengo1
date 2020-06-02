@@ -25,22 +25,22 @@ const RequestDemo = () => {
             <div className="input_wrapper">
               <input
                 type="text"
-                placeholder="First name"
-                name="firstName"
+                placeholder="First Name"
+                name="FNAME"
                 ref={register({ required: true, maxLength: 80 })}
               ></input>
-              {errors.firstName && (
+              {errors.FNAME && (
                 <div className="error">First name is required</div>
               )}
             </div>
             <div className="input_wrapper">
               <input
                 type="text"
-                placeholder="Last name"
-                name="lastName"
+                placeholder="Last Name"
+                name="LNAME"
                 ref={register({ required: true, maxLength: 100 })}
               ></input>
-              {errors.firstName && (
+              {errors.LNAME && (
                 <div className="error">Last name is required</div>
               )}
             </div>
@@ -51,13 +51,13 @@ const RequestDemo = () => {
                 name="email"
                 ref={register({ required: true, pattern: /^\S+@\S+$/i })}
               />
-              {errors.email && <div className="error">email is required</div>}
+              {errors.EMAIL && <div className="error">email is required</div>}
             </div>
             <div className="input_wrapper">
               <input
                 type="text"
                 placeholder="Company"
-                name="Company"
+                name="COMPANY"
                 ref={register}
               />
             </div>
@@ -65,7 +65,7 @@ const RequestDemo = () => {
               <input
                 type="text"
                 placeholder="Country"
-                name="Country"
+                name="COUNTRY"
                 ref={register}
               />
             </div>
@@ -73,10 +73,10 @@ const RequestDemo = () => {
               <input
                 type="tel"
                 placeholder="Mobile"
-                name="mobile"
+                name="PHONE"
                 ref={register({ pattern: /^([+]\d{2})?\d{10}$/ })}
               />
-              {errors.mobile && (
+              {errors.PHONE && (
                 <div className="error">enter valid phonenumber</div>
               )}
             </div>
