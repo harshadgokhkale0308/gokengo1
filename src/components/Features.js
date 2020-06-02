@@ -12,8 +12,8 @@ const Features = () => {
                 Our platform brings <br></br>it all together.
               </h1>
               <p>
-                GokenGo platform can enable manufacturing factory floor, process
-                plants, Oil & Gas sites and hospitals ICUs to go digital. It
+                GokenGo platform can enable manufacturing factory floors, process
+                plants, Oil & Gas sites and hospital ICUs to go digital. It
                 captures the essence of continuity in daily operations.
               </p>
             </div>
@@ -23,8 +23,8 @@ const Features = () => {
               <div className="content">
                 <h2 className="title">Record</h2>
                 <div className="copy">
-                  Good manufacturing practice (GMP) regulations specify that
-                  manufacturer must maintain proper documentation and records.
+                  Good manufacturing practice (GMP) regulations require that
+                  manufacturers must maintain proper documentation and records.
                   It helps to understand what a manufacturing function has done
                   in the past and what it is doing now and, thus, it provides a
                   basis for planning what it is going to do in the future.
@@ -38,7 +38,7 @@ const Features = () => {
                 <h2 className="title">Measure</h2>
                 <div className="copy">
                   {" "}
-                  Measurements records parameters that monitor the condition of
+                  Measurements record parameters that monitor the condition of
                   an asset. It includes vibration data, acoustic data,
                   temperature, pressure, moisture, humidity , environment data
                   and many more
@@ -63,7 +63,7 @@ const Features = () => {
               <div className="content">
                 <h2 className="title">Analyze</h2>
                 <div className="copy">
-                  Manufacturers need to continually apply analytics – asset by
+                  Manufacturers need to continously apply analytics – asset by
                   asset, line by line, process by process and plant by plant to
                   capture the full value of the technology. Analytics dashboard
                   is not a one-off exercise

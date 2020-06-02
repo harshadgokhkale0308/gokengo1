@@ -22,7 +22,7 @@ const Impact = () => {
           </div>
           <p>
             a simple tool to aggregate shift-wise information helped one of our
-            client create huge economic impact
+            clients create huge economic impact
           </p>
           <div className="money_text">
             $250,000
