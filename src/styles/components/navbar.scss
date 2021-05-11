@@ -29,8 +29,8 @@
 
   .logo {
     transition: all 0.1s ease-in-out;
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
 
     @include media("<=phone") {
       height: 2rem;
@@ -49,7 +49,7 @@
       text-decoration: none;
     }
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 
